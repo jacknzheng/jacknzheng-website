@@ -438,7 +438,7 @@ export default function KMaxwellMomentum() {
       <p>By extending single EMA and Bi-Maxwell momentum, K-Maxwell shows that mixing multiple momentum timescales and annealing their mixture during training can speed up pre-training convergence. Its robustness at larger batch sizes also suggests that these improvements extend beyond simply dampening stochastic gradient noise.</p>
       <p>Most momentum research has focused on toy models with NAG and Polyak momentum, we’re most interested now, in how momentum interacts with non-Euclidean gradient descent, where updates are shaped by a geometry beyond ordinary Euclidean distance. We hope to find a better theory for convergence at the edge of stability. However, many open questions remain about why temporal filtering improves optimization, and through what mechanism mixed EMA momentum does this. We believe understanding these mechanisms could help us design more effective, memory-efficient momentum methods.</p>
 
-      <p>Acknowledgements:</p>
+      <h2 id="acknowledgements">Acknowledgements</h2>
 
       <p>
         Thank you to <a href="https://jhong21.com/">Jerry Hong</a> for assisting
