@@ -15,6 +15,8 @@ const config = defineConfig({
       prerender: {
         enabled: true,
         crawlLinks: true,
+        // Linked figures are static files, not pages to render as HTML.
+        filter: ({ path }) => !path.startsWith('/images/'),
         autoSubfolderIndex: true,
         failOnError: true,
       },

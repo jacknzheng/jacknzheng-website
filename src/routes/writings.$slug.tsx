@@ -1,5 +1,6 @@
 import { Link, createFileRoute, notFound } from '@tanstack/react-router'
 import { categoryPath, writingBySlug } from '#/data/writings'
+import kMaxwellContent from '#/content/k-maxwell-momentum.html?raw'
 
 export const Route = createFileRoute('/writings/$slug')({
   loader: ({ params }) => {
@@ -17,6 +18,7 @@ export const Route = createFileRoute('/writings/$slug')({
           ? `${loaderData.writing.title} — Jack Neo Zheng`
           : 'Jack Neo Zheng',
       },
+      { name: 'description', content: loaderData?.writing.excerpt },
     ],
   }),
 })
@@ -37,17 +39,26 @@ function WritingPage() {
       <h1 className="mt-3 font-serif text-[2rem] leading-snug font-normal text-ink italic">
         {writing.title}
       </h1>
-      <img
-        src={writing.image}
-        alt=""
-        className="mt-8 aspect-[4/3] w-full max-w-md object-cover"
-      />
-      <p className="mt-8 font-sans text-[1rem] leading-relaxed text-ink">
-        {writing.excerpt}
-      </p>
-      <p className="mt-6 font-sans text-[0.95rem] leading-relaxed text-muted">
-        Placeholder text. The finished piece will live here.
-      </p>
+      {writing.slug === 'k-maxwell-momentum' ? (
+        <div
+          className="article-body"
+          dangerouslySetInnerHTML={{ __html: kMaxwellContent }}
+        />
+      ) : (
+        <>
+          <img
+            src={writing.image}
+            alt=""
+            className="mt-8 aspect-[4/3] w-full max-w-md object-cover"
+          />
+          <p className="mt-8 font-sans text-[1rem] leading-relaxed text-ink">
+            {writing.excerpt}
+          </p>
+          <p className="mt-6 font-sans text-[0.95rem] leading-relaxed text-muted">
+            Placeholder text. The finished piece will live here.
+          </p>
+        </>
+      )}
     </article>
   )
 }
