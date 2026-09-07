@@ -4,7 +4,6 @@ const navItems = [
   { to: '/technical-essays', label: 'Technical Essays' },
   { to: '/essays', label: 'Essays' },
   { to: '/memos', label: 'Memos' },
-  { to: '/about', label: 'About' },
 ] as const
 
 const socialItems = [
@@ -30,18 +29,13 @@ export function SiteSidebar() {
       <nav className="mt-8 flex flex-col gap-2.5 md:mt-10">
         {navItems.map((item) => {
           const isActive = pathname === item.to
-          const isFilter = item.to !== '/about'
 
           return (
             <Link
               key={item.to}
-              to={isFilter && isActive ? '/' : item.to}
-              resetScroll={!isFilter}
-              aria-label={
-                isFilter
-                  ? `${isActive ? 'Clear' : 'Apply'} ${item.label} filter`
-                  : undefined
-              }
+              to={isActive ? '/' : item.to}
+              resetScroll={false}
+              aria-label={`${isActive ? 'Clear' : 'Apply'} ${item.label} filter`}
               className={`w-fit font-sans text-[0.95rem] tracking-tight no-underline ${
                 isActive
                   ? 'text-ink underline decoration-ink underline-offset-[5px]'

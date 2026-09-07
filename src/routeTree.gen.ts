@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as EssaysRouteImport } from './routes/essays'
 import { Route as MemosRouteImport } from './routes/memos'
 import { Route as TechnicalEssaysRouteImport } from './routes/technical-essays'
@@ -19,11 +18,6 @@ import { Route as WritingsSlugRouteImport } from './routes/writings.$slug'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EssaysRoute = EssaysRouteImport.update({
@@ -49,7 +43,6 @@ const WritingsSlugRoute = WritingsSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/essays': typeof EssaysRoute
   '/memos': typeof MemosRoute
   '/technical-essays': typeof TechnicalEssaysRoute
@@ -57,7 +50,6 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/essays': typeof EssaysRoute
   '/memos': typeof MemosRoute
   '/technical-essays': typeof TechnicalEssaysRoute
@@ -66,7 +58,6 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/essays': typeof EssaysRoute
   '/memos': typeof MemosRoute
   '/technical-essays': typeof TechnicalEssaysRoute
@@ -75,24 +66,12 @@ export interface FileRoutesById {
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    | '/'
-    | '/about'
-    | '/essays'
-    | '/memos'
-    | '/technical-essays'
-    | '/writings/$slug'
+    '/' | '/essays' | '/memos' | '/technical-essays' | '/writings/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/essays'
-    | '/memos'
-    | '/technical-essays'
-    | '/writings/$slug'
+  to: '/' | '/essays' | '/memos' | '/technical-essays' | '/writings/$slug'
   id:
     | '__root__'
     | '/'
-    | '/about'
     | '/essays'
     | '/memos'
     | '/technical-essays'
@@ -101,7 +80,6 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   EssaysRoute: typeof EssaysRoute
   MemosRoute: typeof MemosRoute
   TechnicalEssaysRoute: typeof TechnicalEssaysRoute
@@ -115,13 +93,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/essays': {
@@ -157,7 +128,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   EssaysRoute: EssaysRoute,
   MemosRoute: MemosRoute,
   TechnicalEssaysRoute: TechnicalEssaysRoute,
