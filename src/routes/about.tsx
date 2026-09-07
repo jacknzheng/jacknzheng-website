@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import aboutContent from '#/content/about.html?raw'
+import AboutContent from '#/content/about'
 
 export const Route = createFileRoute('/about')({
   component: About,
@@ -21,10 +21,9 @@ function About() {
       <h1 className="font-serif text-[1.7rem] leading-snug font-normal text-ink italic">
         About
       </h1>
-      <div
-        className="article-body"
-        dangerouslySetInnerHTML={{ __html: aboutContent }}
-      />
+      <div className="article-body">
+        <AboutContent />
+      </div>
     </article>
   )
 }

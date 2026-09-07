@@ -1,6 +1,9 @@
 import { Link, createFileRoute, notFound } from '@tanstack/react-router'
-import { categoryPath, writingBySlug } from '#/data/writings'
-import kMaxwellContent from '#/content/k-maxwell-momentum.html?raw'
+import {
+  categoryPath,
+  writingBySlug,
+  writingComponents,
+} from '#/data/writings'
 
 export const Route = createFileRoute('/writings/$slug')({
   loader: ({ params }) => {
@@ -25,6 +28,7 @@ export const Route = createFileRoute('/writings/$slug')({
 
 function WritingPage() {
   const { writing } = Route.useLoaderData()
+  const Body = writingComponents[writing.slug]
 
   return (
     <article className="max-w-[40rem]">
@@ -39,11 +43,10 @@ function WritingPage() {
       <h1 className="mt-3 font-serif text-[2rem] leading-snug font-normal text-ink italic">
         {writing.title}
       </h1>
-      {writing.slug === 'k-maxwell-momentum' && (
-        <div
-          className="article-body"
-          dangerouslySetInnerHTML={{ __html: kMaxwellContent }}
-        />
+      {Body && (
+        <div className="article-body">
+          <Body />
+        </div>
       )}
     </article>
   )

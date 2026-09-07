@@ -1,3 +1,6 @@
+import type { ComponentType } from 'react'
+import KMaxwellMomentum from '#/content/k-maxwell-momentum'
+
 export const categories = [
   'Technical Essays',
   'Essays',
@@ -24,6 +27,12 @@ export const writings: Writing[] = [
       'Exploring multiple momentum timescales and annealing the memory of past gradients during pre-training.',
   },
 ]
+
+// Kept out of `Writing` so loader data stays serializable across the SSR
+// boundary; components are looked up by slug at render time.
+export const writingComponents: Record<string, ComponentType> = {
+  'k-maxwell-momentum': KMaxwellMomentum,
+}
 
 export function writingsByCategory(category: Category) {
   return writings.filter((writing) => writing.category === category)
