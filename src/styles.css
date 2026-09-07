@@ -147,3 +147,11 @@ body {
   overflow-wrap: anywhere;
 }
 .article-body [id] { scroll-margin-top: 2rem; }
+
+
+.article-body .about-timeline {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.article-body .about-timeline > li { margin: 1.5rem 0; }
+.article-body .about-timeline figure { margin: 1.25rem 0 2rem; }
