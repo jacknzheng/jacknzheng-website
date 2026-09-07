@@ -12,7 +12,13 @@ update = g.lerp_(m_eff, mu)                       # Nesterov mix unchanged`
 export default function KMaxwellMomentum() {
   return (
     <>
-      <p className="article-byline">Collaborator: Jeffrey Cheng</p>
+      <p className="article-byline">
+        Collaborator: <a href="https://github.com/jeffreycider">Jeffrey Cheng</a>
+        {' · '}
+        <a href="https://github.com/jacknzheng/kmaxwell-sota/blob/master/records/track_3_optimization/results/20260826_kmaxwell_3160/README.md">
+          GitHub report
+        </a>
+      </p>
 
       <p>
         It is our belief that momentum remains an under-optimized area of
@@ -24,6 +30,19 @@ export default function KMaxwellMomentum() {
       </p>
 
       <h2 id="results">Results</h2>
+
+      <p>
+        Our variant on single EMA momentum: K-Maxwell, achieves SOTA on Nano-GPT
+        speed-run for both Muon, MuonH and the current world record SOAP
+        optimizer, on Track 3 optimization. We surpass the previous world record
+        by 90 steps (3% improvement in convergence speed) on Muon, and 60 steps
+        on MuonH. However, K-Maxwell only surpasses the current world record by
+        10 steps on SOAP-Muon, and does not reach statistical significance in
+        surpassing its predecessor Bi-Maxwell, which we believe is due to the
+        overlapping objective of reducing oscillations at the edge of stability,
+        which both momentum and SOAP-style preconditioning{' '}
+        <a href="https://arxiv.org/abs/2409.11321">[6]</a>, aim to address.
+      </p>
 
       <div
         className="article-table"
@@ -77,19 +96,6 @@ export default function KMaxwellMomentum() {
           </tbody>
         </table>
       </div>
-
-      <p>
-        Our variant on single EMA momentum: K-Maxwell, achieves SOTA on Nano-GPT
-        speed-run for both Muon, MuonH and the current world record SOAP
-        optimizer, on Track 3 optimization. We surpass the previous world record
-        by 90 steps (3% improvement in convergence speed) on Muon, and 60 steps
-        on MuonH. However, K-Maxwell only surpasses the current world record by
-        10 steps on SOAP-Muon, and does not reach statistical significance in
-        surpassing its predecessor Bi-Maxwell, which we believe is due to the
-        overlapping objective of reducing oscillations at the edge of stability,
-        which both momentum and SOAP-style preconditioning{' '}
-        <a href="https://arxiv.org/abs/2409.11321">[6]</a>, aim to address.
-      </p>
 
       <p>
         However, we have found K-Maxwell generalizes well, and even improves at
@@ -628,7 +634,8 @@ export default function KMaxwellMomentum() {
       <p>Acknowledgements:</p>
 
       <p>
-        Thank you to Jerry Hong for assisting with this project. Baseline
+        Thank you to <a href="https://jhong21.com/">Jerry Hong</a> for assisting
+        with this project. Baseline
         implementations and their contributors are credited in the linked
         experiment reports.
       </p>
