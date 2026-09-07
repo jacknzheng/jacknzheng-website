@@ -21,27 +21,13 @@ export default function KMaxwellMomentum() {
       </p>
 
       <p>
-        It is our belief that momentum remains an under-optimized area of
-        pre-training. While recent research predominately focuses on improving
-        the optimizer family itself, momentum has mostly remained a single EMA
-        buffer with a fixed decay.{' '}
-        <a href="https://arxiv.org/abs/1412.6980">[1]</a>,{' '}
-        <a href="https://arxiv.org/html/2409.03137">[2]</a>
+        We believe momentum remains an under-optimized area of pre-training. While much recent research focuses on optimizer design, momentum often still uses a single exponential moving average (EMA) buffer with a fixed decay rate. <a href="https://arxiv.org/abs/1412.6980">[1]</a>, <a href="https://arxiv.org/html/2409.03137">[2]</a>
       </p>
 
       <h2 id="results">Results</h2>
 
       <p>
-        Our variant on single EMA momentum: K-Maxwell, achieves SOTA on Nano-GPT
-        speed-run for both Muon, MuonH and the current world record SOAP
-        optimizer, on Track 3 optimization. We surpass the previous world record
-        by 90 steps (3% improvement in convergence speed) on Muon, and 60 steps
-        on MuonH. However, K-Maxwell only surpasses the current world record by
-        10 steps on SOAP-Muon, and does not reach statistical significance in
-        surpassing its predecessor Bi-Maxwell, which we believe is due to the
-        overlapping objective of reducing oscillations at the edge of stability,
-        which both momentum and SOAP-style preconditioning{' '}
-        <a href="https://arxiv.org/abs/2409.11321">[6]</a>, aim to address.
+        K-Maxwell, our variant of single-EMA momentum, improves on the current world records for the Muon, MuonH, and SOAP-Muon optimizer baselines in Track 3 of the modded-nanoGPT speedrun. As shown below, it reduces the required training steps by 90 on Muon (2.77%) and 60 on MuonH (1.92%). However, the observed gain on SOAP-Muon is only 10 steps (0.37%), with no statistically significant improvement over its predecessor, Bi-Maxwell. We suspect this is due to an overlap in how momentum and SOAP-style preconditioning <a href="https://arxiv.org/abs/2409.11321">[6]</a> both address oscillations at the edge of stability.
       </p>
 
       <div
@@ -98,20 +84,13 @@ export default function KMaxwellMomentum() {
       </div>
 
       <p>
-        However, we have found K-Maxwell generalizes well, and even improves at
-        larger batch sizes, while Bi-Maxwell degrades, which suggests that the
-        annealed momentum mix is not simply performing noise reduction.
+        We also find that K-Maxwell generalizes well to larger batch sizes, while Bi-Maxwell’s degrades to the control - that is normal Muon with a single EMA momentum. This suggests that the annealed momentum mixture does more than dampen gradient noise.
       </p>
 
       <h2 id="what-is-momentum-doing">What is momentum doing?</h2>
 
       <p>
-        Momentum is commonly thought of as a heavy ball carrying us through
-        divots, saddle points and other local minima. However this is only
-        partly true, momentum is helping us converge faster by dampening the
-        effect of pathological curvature, which can be expressed in the
-        condition number. The condition number represents the ratio of largest
-        and smallest eigenvalues of the Hessian.
+        Momentum is commonly conceived of as a heavy ball carrying us through small divots, saddle points and across flat regions of the loss surface. While this is intuitively useful, momentum does much more - helping us converge faster when curvature differs greatly across our gradient directions, or in other words, our loss objective is poorly conditioned. For a positive-definite Hessian, which describes our loss surface’s local curvature, the condition number is the ratio of its largest to smallest eigenvalues:
       </p>
 
       <div className="article-equation">
@@ -151,74 +130,22 @@ export default function KMaxwellMomentum() {
       </div>
 
       <p>
-        In neural network optimization, assuming full batch gradient descent and
-        a convex loss surface, the Polyak momentum variant pushes us faster
-        along directions of low curvature, while dampening oscillations along
-        directions of high curvature - which analytically accelerates
-        convergence on ill-conditioned loss surfaces, by changing the dependence
-        on condition number from{' '}
-        <span className="katex">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <semantics>
-              <mrow>
-                <mi>κ</mi>
-              </mrow>
-              <annotation encoding="application/x-tex">
-                {String.raw`\kappa`}
-              </annotation>
-            </semantics>
-          </math>
-        </span>{' '}
-        to{' '}
-        <span className="katex">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <semantics>
-              <mrow>
-                <msqrt>
-                  <mi>κ</mi>
-                </msqrt>
-              </mrow>
-              <annotation encoding="application/x-tex">
-                {String.raw`\sqrt{\kappa}`}
-              </annotation>
-            </semantics>
-          </math>
-        </span>{' '}
-        <a href="https://distill.pub/2017/momentum/">[7]</a>,{' '}
-        <a href="https://doi.org/10.1016/0041-5553%2864%2990137-5">[8]</a>.
+        To understand why momentum helps us converge faster, we can observe a simple example. For full-batch optimization of a convex quadratic loss, tuned Polyak momentum helps accelerate progress along directions of low curvature while damping oscillations along directions of high curvature, which occur at the <em>edge of stability</em>. In this simplified setting, it improves the convergence dependence on the condition number from κ to √κ. <a href="https://distill.pub/2017/momentum/">[7]</a>, <a href="https://doi.org/10.1016/0041-5553%2864%2990137-5">[8]</a>
       </p>
-
-      <p>
-        This is quite intuitive as we can imagine momentum along a low curvature
-        direction is accumulating persistent directions +g, +g, … while momentum
-        along a high curvature direction is oscillating, or bouncing along the
-        valley walls, with gradients frequently alternating sign: -g, +g, -g,
-        +g, creating an implicit dampening effect. The reason for this
-        oscillation is best explained by the fact that neural networks train on
-        the edge of stability, an observation made by Cohen in 2021{' '}
-        <a href="https://arxiv.org/abs/2103.00065">[9]</a>, meaning training
-        progresses towards high curvature directions, causing curvature to
-        increase throughout training and then oscillate at the stability
-        boundary{' '}
+      <div className="article-equation">
         <span className="katex">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <semantics>
-              <mrow>
-                <mstyle scriptLevel={0} displaystyle="true">
-                  <mfrac>
-                    <mn>2</mn>
-                    <mi>η</mi>
-                  </mfrac>
-                </mstyle>
-              </mrow>
-              <annotation encoding="application/x-tex">
-                {String.raw`\dfrac{2}{\eta}`}
-              </annotation>
-            </semantics>
+          <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow><msub><mi>v</mi><mi>t</mi></msub><mo>=</mo><mi>β</mi><msub><mi>v</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><mo>∇</mo><mi>L</mi><mo>(</mo><msub><mi>θ</mi><mi>t</mi></msub><mo>)</mo><mo>,</mo><mspace width="1em" /><msub><mi>θ</mi><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>θ</mi><mi>t</mi></msub><mo>−</mo><mi>η</mi><msub><mi>v</mi><mi>t</mi></msub></mrow>
           </math>
         </span>
-        .
+      </div>
+      <p><em>Polyak momentum.</em> <a href="https://doi.org/10.1016/0041-5553%2864%2990137-5">[8]</a></p>
+
+      <p>
+        The intuition is that gradients along a low curvature direction tend to keep the same sign: +g, +g, …, so momentum accumulates along a persistent gradient direction. However, down high curvature directions, updates can overshoot due to the discretized learning rate of gradient descent, causing gradients to alternate: −g, +g, −g, +g. Averaging these opposing gradients dampens this oscillating motion, which is exactly what momentum does.
       </p>
+
+      <p>Cohen et al. (2021) <a href="https://arxiv.org/abs/2103.00065">[9]</a> observed that, during full-batch neural network training, the largest Hessian eigenvalue often rises and then hovers near <span className="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mn>2</mn><mi>η</mi></mfrac></mrow></math></span>, where <span className="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>η</mi></mrow></math></span> is the learning rate. This is called training at the edge of stability, and we find that momentum permits us to take on larger learning rates which can speed up convergence.</p>
 
       <figure id="figure-1">
         <video
@@ -242,70 +169,19 @@ export default function KMaxwellMomentum() {
           <a href="https://centralflows.github.io/part1/">
             Central Flows companion website
           </a>{' '}
-          <a href="#ref-18">[18]</a>; related edge-of-stability findings are
+          <a href="#ref-19">[19]</a>; related edge-of-stability findings are
           discussed in <a href="#ref-9">[9]</a>.
         </figcaption>
       </figure>
 
       <p>
-        Momentum effectively dampens oscillations at the edge of stability,
-        which allows us to take on a higher learning rate of{' '}
-        <span className="katex">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <semantics>
-              <mrow>
-                <mstyle scriptLevel={0} displaystyle="true">
-                  <mfrac>
-                    <mrow>
-                      <mn>2</mn>
-                      <mo>+</mo>
-                      <mn>2</mn>
-                      <mi>β</mi>
-                    </mrow>
-                    <msub>
-                      <mi>λ</mi>
-                      <mrow>
-                        <mi>m</mi>
-                        <mi>a</mi>
-                        <mi>x</mi>
-                      </mrow>
-                    </msub>
-                  </mfrac>
-                </mstyle>
-              </mrow>
-              <annotation encoding="application/x-tex">
-                {String.raw`\dfrac{2+2\beta}{\lambda_{max}}`}
-              </annotation>
-            </semantics>
-          </math>
-        </span>
-        , while still ensuring convergence.
+        For the standard Polyak update on a positive-definite quadratic loss, the new stability condition is <span className="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>0</mn><mo>&lt;</mo><mi>η</mi><mo>&lt;</mo><mfrac><mrow><mn>2</mn><mo>+</mo><mn>2</mn><mi>β</mi></mrow><msub><mi>λ</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub></mfrac></mrow></math></span>, where <span className="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>β</mi></mrow></math></span> is the momentum coefficient. <a href="https://distill.pub/2017/momentum/">[7]</a> In the experiments of Andreyev et al., large-batch momentum dynamics approach the optimizer-specific deterministic stability boundary, while smaller batches impose tighter stability constraints. <a href="https://arxiv.org/html/2604.14108v1">[17]</a>
       </p>
 
       <h2 id="k-maxwell-momentum">K-Maxwell momentum</h2>
 
       <p>
-        K-Maxwell momentum extends Bi-Maxwell{' '}
-        <a href="https://arxiv.org/abs/2608.22994">[10]</a> and AdEMAMix{' '}
-        <a href="https://arxiv.org/html/2409.03137">[2]</a> by introducing 8
-        log-spaced EMA buffers, with decay rates (
-        <span className="katex">
-          <math xmlns="http://www.w3.org/1998/Math/MathML">
-            <semantics>
-              <mrow>
-                <mi>β</mi>
-              </mrow>
-              <annotation encoding="application/x-tex">
-                {String.raw`\beta`}
-              </annotation>
-            </semantics>
-          </math>
-        </span>
-        ) fixed. The starting mixture of the momentum buffers have a mean age of
-        58, and throughout training, linearly interpolates towards a mean age of
-        26, until step 3250. Training begins with a single EMA momentum buffer
-        and switches to K-Maxwell at step 1000.{' '}
-        <a href="https://github.com/KellerJordan/modded-nanogpt/pull/357">[3]</a>
+        K-Maxwell momentum extends Bi-Maxwell <a href="https://arxiv.org/abs/2608.22994">[10]</a> and AdEMAMix <a href="https://arxiv.org/html/2409.03137">[2]</a> using eight EMA buffers with logarithmically spaced timescales and fixed decay rates (<span className="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>β</mi></mrow></math></span>). In the Muon configuration shown here, training begins with a single EMA buffer and switches to K-Maxwell at step 1000. From the switch step, we linearly interpolate the mixture weights from a mean age of 58 steps toward a mean age of 26 steps, at step 3250. Mean age describes on average, the gradient age in the EMA buffer, weighted by each past gradient’s contribution. <a href="https://github.com/KellerJordan/modded-nanogpt/pull/357">[3]</a>
       </p>
 
       <div className="article-equation">
@@ -390,13 +266,7 @@ export default function KMaxwellMomentum() {
       </div>
 
       <p>
-        The following pseudocode illustrates the annealed momentum after the
-        switch step. Initialization and the surrounding optimizer are defined in
-        the source trainer{' '}
-        <a href="https://github.com/jacknzheng/kmaxwell-sota/blob/master/records/track_3_optimization/results/20260826_kmaxwell_3160/train_gpt_kmaxwell_anneal.py">
-          [11]
-        </a>
-        .
+        The following pseudocode illustrates the annealed momentum after the switch step. Initialization and the surrounding optimizer are defined in the source trainer <a href="https://github.com/jacknzheng/kmaxwell-sota/blob/master/records/track_3_optimization/results/20260826_kmaxwell_3160/train_gpt_kmaxwell_anneal.py">[11]</a>.
       </p>
 
       <pre>
@@ -404,12 +274,7 @@ export default function KMaxwellMomentum() {
       </pre>
 
       <p>
-        We use log-spaced buffers because this allows us to capture meaningfully
-        different timescales, as slower EMAs act as a low-pass filter{' '}
-        <a href="https://www.dsprelated.com/freebooks/filters/Bandwidth_One_Pole.html">
-          [12]
-        </a>{' '}
-        on faster frequencies and frequency characteristically behaves like:
+        We use logarithmically spaced timescales to capture meaningfully different ranges of gradient history. Slower EMAs can act as low-pass filters <a href="https://www.dsprelated.com/freebooks/filters/Bandwidth_One_Pole.html">[12]</a>, smoothing out high frequency changes while retaining persistent gradient directions. Since we know characteristic frequency <span className="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ω</mi></mrow></math></span> is approximately inversely proportional to memory <span className="katex"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>τ</mi></mrow></math></span> (i.e. wavelength), we adopt a logarithmic scale.
       </p>
 
       <div className="article-equation">
@@ -435,11 +300,7 @@ export default function KMaxwellMomentum() {
       </div>
 
       <p>
-        But mean age does not elicit the true expressivity enabled by multiple
-        EMA buffers. As discussed in AdEMAMix{' '}
-        <a href="https://arxiv.org/html/2409.03137">[2]</a>, a mixture of EMAs
-        allows us to have substantial weight on the newest gradients while
-        maintaining a longer tail of historic gradients.
+        However, mean age alone does not capture the expressivity allowed by multiple EMA buffers. As discussed in AdEMAMix <a href="https://arxiv.org/html/2409.03137">[2]</a>, an EMA mixture can give substantial weight to the newest gradients while retaining a long tail of older gradients. The example below shows how two memory profiles can have the same mean age but have vastly different gradient ages present:
       </p>
 
       <div
@@ -472,15 +333,7 @@ export default function KMaxwellMomentum() {
       </div>
 
       <p>
-        We believe that by maintaining meaningfully different timescales in
-        every gradient step, we can remove predictable errors. Similar to
-        Richardson extrapolation{' '}
-        <a href="https://personal.math.ubc.ca/~israel/m215/rich/rich.html">
-          [13]
-        </a>{' '}
-        that uses differing step-sizes to remove lower order errors, we use a
-        weighted combination of different frequencies to attenuate to the
-        recurring oscillations that occur at the edge of stability.
+        We suspect that combining very distinct timescales at each training step helps reduce recurring errors, including oscillations at the edge of stability. This is loosely analogous to Richardson extrapolation <a href="https://personal.math.ubc.ca/~israel/m215/rich/rich.html">[13]</a>, which combines estimates at different step sizes to remove predictable error. Our mechanism is more closely associated with the idea of multi-timescale temporal filtering, however we presume it goes beyond this as it retains a stable advantage over normal single EMA Muon even with larger batch size. For related mathematical background on stochastic momentum dynamics, see Li, Tai, and E (2019). <a href="https://www.jmlr.org/papers/v20/17-526.html">[18]</a>
       </p>
 
       <h2 id="annealing-momentum">Annealing momentum</h2>
@@ -509,17 +362,7 @@ export default function KMaxwellMomentum() {
       </figure>
 
       <p>
-        We also observe that annealing momentum to a lower mean age at the end
-        of training creates substantial gains compared to configurations without
-        annealing.{' '}
-        <a href="https://github.com/jacknzheng/kmaxwell-sota/blob/master/records/track_3_optimization/results/20260826_kmaxwell_3160/README.md">
-          [14]
-        </a>{' '}
-        We suspect this is due to higher momentum better maintaining persistent
-        gradients during the extended <em>transient phase</em> of training, and
-        providing greater responsiveness in the <em>final convergence phase</em>{' '}
-        which is needed to adapt to frequent oscillations{' '}
-        <a href="https://proceedings.mlr.press/v28/sutskever13.html">[15]</a>.
+        We also observe substantial gains from annealing momentum, and see a step-function improvement over configurations that kept the mixture fixed as seen in the figure below. <a href="https://github.com/jacknzheng/kmaxwell-sota/blob/master/records/track_3_optimization/results/20260826_kmaxwell_3160/README.md">[14]</a> We suspect that longer memory helps maintain persistent gradient directions during the extended <em>transient phase</em>, when training is still making broad progress. Shorter memory may then improve responsiveness during the <em>late-stage convergence phase</em>, when the optimizer needs to adapt quickly to oscillatory changes in gradient direction. <a href="https://proceedings.mlr.press/v28/sutskever13.html">[15]</a>
       </p>
 
       <figure id="figure-3">
@@ -545,31 +388,10 @@ export default function KMaxwellMomentum() {
         </figcaption>
       </figure>
 
-      <p>
-        This aligns with the concern of momentum amplifying noise by
-        internalizing random error, especially during the final phase of
-        training where gradients frequently change sign and oscillate along
-        directions of high curvature. The traditional approach is to normalize
-        the gradient itself, by the root-squared gradient for example in scalar
-        RMSProp which also slows convergence by shrinking the effective learning
-        rate. It seems that annealing momentum may also do the trick, without
-        delaying convergence.
-      </p>
+
 
       <p>
-        One possible explanation is that long momentum memory becomes less
-        useful during late-stage convergence, when retaining older gradient
-        directions can delay the optimizer’s response to changes in the loss
-        landscape. Shortening that memory may improve responsiveness, although
-        it also reduces noise smoothing. RMSProp addresses a related challenge
-        by scaling each gradient component using its running root-mean-square
-        magnitude{' '}
-        <a href="https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf#page=29">
-          [16]
-        </a>{' '}
-        but typically slows late-stage convergence by reducing the effective
-        learning rate. K-Maxwell momentum annealing seems to also do the trick
-        without negatively impacting convergence.
+        Another possible explanation is that long momentum memory becomes less useful late in training as retaining older gradient directions can delay the optimizer’s response to changes in the loss landscape. Shortening that memory may improve responsiveness, although it also reduces noise smoothing. Optimizer families such as RMSProp and ADAM, attempt to solve related problems by adjusting updates responsively, using running squared-gradient estimates to scale updates; Adam also uses a running average of the gradient in its numerator. <a href="https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf#page=29">[16]</a>, <a href="https://arxiv.org/abs/1412.6980">[1]</a> This changes the effective learning rate of each component, potentially slowing convergence when gradient norm grows large - which is likely to occur when training at the edge of stability. On the other hand, K-Maxwell instead adjusts how much gradient history contributes to momentum, which appears to strictly improve convergence in our experiments.
       </p>
 
       <h2 id="extending-to-larger-batch-sizes">
@@ -577,17 +399,7 @@ export default function KMaxwellMomentum() {
       </h2>
 
       <p>
-        We also performed ablations on batch size, and found that K-Maxwell
-        improves with larger batch sizes, while Bi-Maxwell degrades to the
-        control which is Muon with single EMA momentum. We suspect this reflects
-        a change in the role of momentum as training becomes less stochastic
-        with larger batch size. Recent work on batch sharpness, which is the
-        curvature encountered along each mini-batch’s gradient direction, finds
-        that momentum imposes a tighter stability constraint at small batch
-        sizes. At larger batch sizes however, training approaches the
-        optimizer’s deterministic stability boundary, allowing it to explore
-        sharper regions than in the small-batch regime.{' '}
-        <a href="https://arxiv.org/html/2604.14108v1">[17]</a>
+        We also varied batch size and found that K-Maxwell’s advantage remains robust at larger batch sizes, while Bi-Maxwell’s performance falls back to the control, which is Muon with a single EMA buffer. We suspect this reflects a shift in momentum’s role as larger batches make gradients less noisy. Recent work on <em>batch sharpness</em>, which describes the curvature encountered along each mini-batch’s gradient direction, finds that momentum imposes a tighter stability constraint at small batch sizes. At larger batch sizes, training approaches the optimizer’s deterministic stability boundary, that is the limit associated with full-batch gradients, allowing it to reach sharper regions than in the small-batch regime, which allows us to continue to converge despite high curvature. <a href="https://arxiv.org/html/2604.14108v1">[17]</a>
       </p>
 
       <figure id="figure-4">
@@ -613,23 +425,18 @@ export default function KMaxwellMomentum() {
       </figure>
 
       <p>
-        One possible explanation is that K-Maxwell’s changing memory profile
-        remains useful as the balance between stochastic fluctuations and
-        curvature-driven oscillations shifts. This could explain why its benefit
-        persists even as larger batches reduce the need for noise smoothing,
-        fluctuations persist which K-Maxwell’s annealing dampens, whereas a
-        fixed mixture such as Bi-Maxwell does not.
+        A related explanation is that K-Maxwell’s momentum annealing becomes more useful as the balance shifts from mostly gradient noise to predominately oscillations caused by curvature, causing us to overshoot along steep directions. Annealing the mixture may help K-Maxwell adapt to this shift more effectively than a fixed momentum mix such as in Bi-Maxwell.
       </p>
 
       <h2 id="limitations">Limitations</h2>
 
       <p>
-        The GPU memory profile of K-Maxwell at larger model sizes is significant
-        as it requires storing 7 additional EMA buffers on top of the single
-        EMA, per parameter. This becomes prohibitively expensive at the trillion
-        parameter model scale. We are actively working on more memory efficient
-        momentum approaches.
+        K-Maxwell has a substantial GPU memory cost at larger model sizes as it stores seven additional EMA buffers per parameter that it is applied to. This can become prohibitively expensive at the trillion-parameter scale. We are actively working on momentum approaches that use less memory.
       </p>
+
+      <h2 id="conclusion">Conclusion</h2>
+      <p>By extending single EMA and Bi-Maxwell momentum, K-Maxwell shows that mixing multiple momentum timescales and annealing their mixture during training can speed up pre-training convergence. Its robustness at larger batch sizes also suggests that these improvements extend beyond simply dampening stochastic gradient noise.</p>
+      <p>Most momentum research has focused on toy models with NAG and Polyak momentum, we’re most interested now, in how momentum interacts with non-Euclidean gradient descent, where updates are shaped by a geometry beyond ordinary Euclidean distance. We hope to find a better theory for convergence at the edge of stability. However, many open questions remain about why temporal filtering improves optimization, and through what mechanism mixed EMA momentum does this. We believe understanding these mechanisms could help us design more effective, memory-efficient momentum methods.</p>
 
       <p>Acknowledgements:</p>
 
@@ -711,7 +518,11 @@ export default function KMaxwellMomentum() {
       </p>
 
       <p className="article-reference" id="ref-18">
-        [18] Cohen, J., Damian, A., Talwalkar, A., Kolter, J. Z., & Lee, J. D. (n.d.). <a href="https://centralflows.github.io/part1/"><em>Part I: How does gradient descent work?</em></a> Understanding Optimization in Deep Learning with Central Flows [Companion website].
+        <a href="https://www.jmlr.org/papers/v20/17-526.html">18] Li, Q., Tai, C., &amp; E, W. (2019). [<em>Stochastic modified equations and dynamics of stochastic gradient algorithms I: Mathematical foundations</em></a>. Journal of Machine Learning Research, 20(40), 1–47.
+      </p>
+
+      <p className="article-reference" id="ref-19">
+        [19] Cohen, J., Damian, A., Talwalkar, A., Kolter, J. Z., & Lee, J. D. (n.d.). <a href="https://centralflows.github.io/part1/"><em>Part I: How does gradient descent work?</em></a> Understanding Optimization in Deep Learning with Central Flows [Companion website].
       </p>
     </>
   )
