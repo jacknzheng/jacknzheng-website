@@ -22,7 +22,7 @@ export const writings: Writing[] = [
     slug: 'k-maxwell-momentum',
     title: 'K-Maxwell Momentum',
     category: 'Technical Essays',
-    image: '/images/k-maxwell/batch-size-ablation.png',
+    image: '/images/k-maxwell/momentum-cover.png',
     excerpt:
       'Exploring multiple momentum timescales and annealing the memory of past gradients during pre-training.',
   },
