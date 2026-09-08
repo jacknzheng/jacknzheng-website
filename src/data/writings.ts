@@ -23,7 +23,7 @@ export const writings: Writing[] = [
     slug: 'is-the-future-of-ai-already-set-in-motion',
     title: 'Is the future of AI already set in motion?',
     category: 'Essays',
-    image: '/images/technological-determinism/b61-pal.png',
+    image: '/images/technological-determinism/cover.png',
     excerpt:
       'Even if our broad technological path is determined by precedent inventions, changing the order at which technologies are developed, or even which technologies we develop alongside each other, could be existentially important.',
   },
