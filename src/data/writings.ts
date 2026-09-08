@@ -16,7 +16,7 @@ export type Writing = {
 
 export const writings: Writing[] = [
   {
-    slug: "is-the-future-of-ai-already-set-in-motion",
+    slug: "is-the-future-of-ai-already-written",
     title: "Is the future of AI already written?",
     category: "Essays",
     image: "/images/technological-determinism/cover.png",
@@ -36,7 +36,7 @@ export const writings: Writing[] = [
 // Kept out of `Writing` so loader data stays serializable across the SSR
 // boundary; components are looked up by slug at render time.
 export const writingComponents: Record<string, ComponentType> = {
-  "is-the-future-of-ai-already-set-in-motion": TechnologicalDeterminism,
+  "is-the-future-of-ai-already-written": TechnologicalDeterminism,
   "k-maxwell-momentum": KMaxwellMomentum,
 };
 
