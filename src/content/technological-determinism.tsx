@@ -59,7 +59,7 @@ export default function TechnologicalDeterminism() {
         <li>{"The case for technological determinism"}</li>
         <li>
           {
-            "How social change as a result of technology, can still be steered with reform"
+            "How change as a result of technology, can still be steered with reform"
           }
         </li>
         <li>
@@ -119,7 +119,7 @@ export default function TechnologicalDeterminism() {
         <li>
           <strong>{"Primacy "}</strong>
           {
-            "- technological change is the main driver of social change; society adapts to it."
+            "- technological change is the main driver of societal change. Culture and institutions adapt to it."
           }
         </li>
       </ul>
