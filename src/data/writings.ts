@@ -24,7 +24,7 @@ export const writings: Writing[] = [
     category: 'Technical Essays',
     image: '/images/k-maxwell/momentum-cover.png',
     excerpt:
-      'Exploring multiple momentum timescales and annealing the memory of past gradients during pre-training.',
+      'One momentum method, two stronger nanoGPT results: 90 fewer training steps on Muon and 60 fewer on MuonH. Explore the measurements and changing memory interactively.',
   },
 ]
 

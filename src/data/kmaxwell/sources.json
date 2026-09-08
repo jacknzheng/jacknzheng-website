@@ -1,0 +1,458 @@
+{
+  "revisions": {
+    "muonSHA": "31717414cd73f11a76e2dccf7f443c9db0e84303",
+    "muonhSHA": "65098cd4c2e88fb27eb1900f64c170bc30eac510",
+    "researchSHA": "98c92ea718ba15a7d11c1f6079c9cdca2e583c21",
+    "biSHA": "b60d7df7c846ab0aaec4c0dda9153445471f4875"
+  },
+  "sources": [
+    {
+      "url": "https://api.github.com/repos/jacknzheng/kmaxwell-sota/git/trees/31717414cd73f11a76e2dccf7f443c9db0e84303?recursive=1",
+      "sha256": "873c194633e927846704c92bbb543505abb7499f8f9fc51813b010d49a77d5d3"
+    },
+    {
+      "url": "https://api.github.com/repos/jacknzheng/kmaxwell-sota/git/trees/98c92ea718ba15a7d11c1f6079c9cdca2e583c21?recursive=1",
+      "sha256": "dbf17ebb5b2bad731661719a0a0e72d7cd4ca79e62667038146135a89d24b108"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/263ea3c4-2b13-4adf-8a71-0410386b20e1.txt",
+      "sha256": "0755b91d9ac3ff993da40dedffa71515c644b2c0c61850d878e00713d0319646"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/556e61b9-efe1-44af-a16c-58e4a3371aea.txt",
+      "sha256": "00ec5da65eb0854d19a811f383ee4d25408d4aeabec7f5087e1c7e9d2b87121e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/55cb8434-a6e6-4056-aeca-e105682c8ff7.txt",
+      "sha256": "539001bc238b672e130e29ba25737ef6efa0b6b9f5cc6b3bc11b859ebb2b70a4"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/629ead24-9ba5-4853-b60f-2fc4344fe066.txt",
+      "sha256": "516bec49c3ae477cb3d33e10031c0f84fb8be08e636045c324a7460f31d2a974"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/78db13a0-5ec8-46bd-871c-8a19e9f61015.txt",
+      "sha256": "3c4134269210ceb58f110f2a56d82ed584065b816360c3fdff0751d538ffb17f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/a7c375e8-c0f3-404b-8522-7b1fd91c7236.txt",
+      "sha256": "4dddba4f068e7d0eb625ca9f338f662dd8151fd98f4e4fafceb65b905202509f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/b199590f-f4a3-47a6-bc5a-aeef94b92000.txt",
+      "sha256": "b3cb9fb940c207076eae1f458f18bb4ede1f7875c85b87503aaf75c1cdbe96ff"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/c67512ee-2070-4733-9769-573116e14ad5.txt",
+      "sha256": "0d6a2b69a55634f306463fa50226e75e2eb55efabbcc9f93af6117350f8bdbc1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/f0bcca7d-a146-4cf8-a7c3-ba36733928f4.txt",
+      "sha256": "0ea6ab1e0e057efff674f1b4c1c92577e66f78dcae04a14e59066a297a90c7b8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260610_tuned_baseline_3250/fc5b73a0-d67d-4b00-a5dc-934fa01c1505.txt",
+      "sha256": "5628e7b555b80931b4384bbfd545b5838ecd709760fdfa5b15838b888433f57d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/H100_seed0.txt",
+      "sha256": "e3caaa6770ca084855975ad089e612a16dac1b123ab6ccb56d65bc53dfb46895"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/H100_seed1.txt",
+      "sha256": "0e847aca0526bd7838293de141cdd2ddb5bb4ad86f90c342f382b06f0468ce54"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/H100_seed2.txt",
+      "sha256": "7b06fc4d225ba08bef47e61a4db3c72bf19241469e2212ca83f1ef376c094900"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/H100_seed3.txt",
+      "sha256": "a87b1202d01b27f4727839d6bb588d1b2bdb1164b3684854335fd53b053dcc9a"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/H100_seed4.txt",
+      "sha256": "c6a5fe93a224f5c55c746d92edf8f4a7d999ca418dc7452f43a025b9fc5f3162"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/H100_seed5.txt",
+      "sha256": "3483374947f23885479bf4bbb8632e39eac81b91dc6b9e95bc25e34265d16f7b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/H100_seed6.txt",
+      "sha256": "583af8405b79ea8ec41cef190b0d87f398bf90c57a0e50fe0d72eb50e1fe5ff9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/H100_seed7.txt",
+      "sha256": "4151c9e28ae9e558298dffc7a49c5ae1e18da42615caa344d6e9088ef713a09e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/31717414cd73f11a76e2dccf7f443c9db0e84303/records/track_3_optimization/results/20260826_kmaxwell_3160/train_gpt_kmaxwell_anneal.py",
+      "sha256": "2fc3b7d5ad40c4bc677f4ade663cf9c9daa14a5022ee9fe849a62d64914b369d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/H100_seed0.txt",
+      "sha256": "43c5fdaf84d6c9179c027d57ee38bba553cc535606c508980eef23acf73f836d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/H100_seed1.txt",
+      "sha256": "ba23f71bf5427f73ad9833791d2054abcb3f1842b4dc2e06aa550d9a3524b179"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/H100_seed2.txt",
+      "sha256": "de8513ac479cf33dd2d81056159f5bfbd30adf73551e4feaab4b41277a98e423"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/H100_seed3.txt",
+      "sha256": "ae13a768a25d1392bf906c6adf5a2dffbc3c5a25f2d91a5cdc89c5ba3f6b0933"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/H100_seed4.txt",
+      "sha256": "59f03f9f829dafa36ab76eaf4b5f5454e8aa985e2d73e80e9b149c0f315a034c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/H100_seed5.txt",
+      "sha256": "2167a431db77c3fdd60383916af1a4ac91113ae5305c19c33915ee174259d934"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/H100_seed6.txt",
+      "sha256": "b930b9371f66241fe5cb9b2ebd05814701eeb2aa6f610d633bd4c2fa6809bf82"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/H100_seed7.txt",
+      "sha256": "ad5d29da064b460bbde5ce5e44d39a5885bbfa37f335703da71f7e97a96df164"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/65098cd4c2e88fb27eb1900f64c170bc30eac510/records/track_3_optimization/results/20260827_muonh_kmaxwell_3065/train_gpt_muonh_kmaxwell.py",
+      "sha256": "faf338de684b0f66c5fbf7075f0c462333bad1b3cb8ba11fb3a1caf7f2ccc547"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/ANL64_s0_seed0.stdout",
+      "sha256": "81fa380b9c303ecf12ad7403503dc5fc200e16294d2274f938b4880f99b375d1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s44e22_seed0.stdout",
+      "sha256": "2ae62002bea3c0cd5e01d78afcb5f8089bf19a97d4d38ee2cf37a2fb46701cfe"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s44e24_seed0.stdout",
+      "sha256": "74251918a76e8333cf27a1739513b015a702f344d6a6906b3a9ccdae280c6c3f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s44e26_seed0.stdout",
+      "sha256": "79a06231367c0a405adc9a870b445fb4a207f2eabb1d165952eac09e562cd8f5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s44e28_seed0.stdout",
+      "sha256": "85de4e5633dbb9c79853eef648b7dea2a3501bfb0bc79f1f3efaff41867771fb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s44e32_seed0.stdout",
+      "sha256": "8eac3eb8e2ae326335596309bffe65db702b2a5e96fd59730f7ab3cbc7282857"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s48e30_seed0.stdout",
+      "sha256": "bbc42d1923454e3b31e23472f3989b2f024cf67ce983907cad8b5df38c19ed38"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s52e30_seed0.stdout",
+      "sha256": "6b54a98c27755a0135af3656c29b5e164a6f742f52a0e3e4d547e9976028bbd8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s54e30_seed0.stdout",
+      "sha256": "ba8f2ebff25f23c7b08ec721c7da8324e8389543873c27edfb50c151cf0db4f5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s58e22_t64_seed0.stdout",
+      "sha256": "4cca1c1e88295f42a34335ecc17b4f3291b50599b8dd8857dbeda5d3220d5637"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s58e24_t64_seed0.stdout",
+      "sha256": "fde578e7666fb060bcc53e98498fcac148bda1e13981da0b3d5939a945c999c8"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s58e26_t72_seed0.stdout",
+      "sha256": "cd4421b561d6d2739c0d85d619c7287d7f4f3a326971fef6db2815cb20c89277"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s58e28_t64_seed0.stdout",
+      "sha256": "7a544de4e8aaa4e62cdfc048fa13b22fae431285f08404fa4180d1b54737cd2c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s58e30_t64_seed0.stdout",
+      "sha256": "ba750ce0f41b8c46c9be7a64c9418333d0c90136f3e2bb9f3b5b542d510136ff"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s58e32_t64_seed0.stdout",
+      "sha256": "55dc75203c183f990eb2cd90b3a943cbe181b723ec410747b17274da32f79ff6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/ablation_anneal_n8/C1_s62e30_t72_seed0.stdout",
+      "sha256": "eaa8735214a5b0225668ec1b86cc9400a99c7763007c7f47e57fefa2064c361b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/mu_sweep_3160/summary.tsv",
+      "sha256": "4e5eb22fc7c11a101a742d13020f973acc243d0643f0ce7def373ee17ba2d808"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/req043_paired_kernel_batch_ablation/readout.tsv",
+      "sha256": "fe8fc7ef435fb3754f7ea11e064994d0914bdad70ce971a7fa3a8166d0e3f0d1"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage1/seed0_k12_tau-min5p666666666666666_tau-max48p99999999999996_sigma1p0_start1000.stdout",
+      "sha256": "ddb68804a2a9f4807b3551eaa3f98a3ac55db5a8c8137ea8d6b83d22bf307ff9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage1/seed0_k16_tau-min5p666666666666666_tau-max48p99999999999996_sigma1p0_start1000.stdout",
+      "sha256": "d35e99b9a915fa5fff965a2a0db12dd0556ac00151c2f23489c7d0dc340a72bc"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage1/seed0_k2_tau-min5p666666666666666_tau-max48p99999999999996_sigma1p0_start1000.stdout",
+      "sha256": "5b53ca3e7da4ba59d7bac0fe8bcd4dc137ee9840ad40f38cb0e6decc9bb20409"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage1/seed0_k3_tau-min5p666666666666666_tau-max48p99999999999996_sigma1p0_start1000.stdout",
+      "sha256": "b1174590ba45d6bb9b873141d7032807f6e5128ed91f3371d91058edc2dca613"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage1/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_sigma1p0_start1000.stdout",
+      "sha256": "2324e9c25517a27dd9aac39731d1bddf90e78011ee14ec9c09df2ed920ae12e0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage1/seed0_k6_tau-min5p666666666666666_tau-max48p99999999999996_sigma1p0_start1000.stdout",
+      "sha256": "2271f211324a7e2d07b1a69651c09229a5b33c495897bcebbd8efecc36ea3889"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage1/seed0_k8_tau-min5p666666666666666_tau-max48p99999999999996_sigma1p0_start1000.stdout",
+      "sha256": "8a2fa90c0a9794e9cbebaf7b21eb9904adfcced34b0e3ae8dda56be0d04d269c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage6/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p25,0p25,0p45.stdout",
+      "sha256": "320a598d2a6bebcaa7b7095a2e11dddac92f122fbb3831f494372ff58397af17"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage6/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p15,0p25,0p25,0p35.stdout",
+      "sha256": "ab3e2b7526bb9dc2a0007eb15fd36d0abc4cadc2dfa357ab8ce72166619cdae0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage6/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p25,0p25,0p25,0p25.stdout",
+      "sha256": "28439c86645c0d6055e4ef7a462f32881a7ce3cf5b47ab182c758be480bfd639"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage6/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p35,0p25,0p25,0p15.stdout",
+      "sha256": "0d3283e85635d13a38adeed8232e1fee01661378eb881fff44dd890d1769e828"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage6/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p45,0p25,0p25,0p05.stdout",
+      "sha256": "bd86bc14b4ee12608015e0f8323292db74784321065119aca1909ff5bc351c97"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage6/seed0_k6_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p0666667,0p166667,0p166667,0p166667,0p166667,0p266667.stdout",
+      "sha256": "40896f0b19e2dc411444e55ac9c8e32a44f129d0821555677850745cbab708dd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage6/seed0_k6_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p166667,0p166667,0p166667,0p166667,0p166667,0p166667.stdout",
+      "sha256": "5476d8cede9de5fa3460f6dddd5655e1e38424a138a95f0f3bf9e8c3dbefaa30"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage6/seed0_k6_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p266667,0p166667,0p166667,0p166667,0p166667,0p0666667.stdout",
+      "sha256": "a635a607869aa35089cf360ad6bf4c8176594e573f4073201ead93abe22bb9cb"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0,0p25,0p25,0p5.stdout",
+      "sha256": "16d5310048c6d8a70fb3e5b0302b37fcd26668a80fa58c6269be28429462374f"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0,0p25,0p3,0p45.stdout",
+      "sha256": "e7bb8fb20024c435ce367f5a6c2da23a019ffc26c0c10b675574c35d86bf4aea"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0,0p3,0p25,0p45.stdout",
+      "sha256": "3782230d897d229d4a85e5e2d6fd5bbbde25dde27001ec1f01b5c66ad550c836"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p03,0p2,0p25,0p52.stdout",
+      "sha256": "7d913130cafaacbb79f2ca1782bf05a72c5cd9e9073a834fe987e0b3ca56f953"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p03,0p2,0p27,0p5.stdout",
+      "sha256": "1bc194e020ffe02fbfbb1d25e4163d51432d01312b4fc00f1b01cee651a87907"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p03,0p22,0p25,0p5.stdout",
+      "sha256": "a39ddda384c5d546237ded8659433c273f4ba204038b21bbd9abb5583ba0d545"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p18,0p25,0p52.stdout",
+      "sha256": "2d0edc1d0d7ce2c268cc0299cb975cc12f979a646db7b6c878067e8d41b8569b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p18,0p27,0p5.stdout",
+      "sha256": "266c60d7d21a87b08cc17d71c7a0bbd547c7e2675a082de6cdb3cac5334e4669"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p2,0p23,0p52.stdout",
+      "sha256": "a79377af190204103a85231a80861da913fc924471ca0a49d6ea1c05b1959570"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p2,0p25,0p5.stdout",
+      "sha256": "795861f2abcaa5d6221aec209d981121179e1b6c3c51d4854d93d398ab251165"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p2,0p27,0p48.stdout",
+      "sha256": "c425fe1809cd0a7f97d211f94e2260634c63628dcb643373b5a0180fe404055e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p2,0p3,0p45.stdout",
+      "sha256": "1521c9bddff9fe8e860776240b4a2a9983d40d4df0a4bb991a7195adf6f8be8d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p22,0p23,0p5.stdout",
+      "sha256": "622ce7a2e6579f4b7a53ac621947f2fe60a41c86892998ffe715ab656a8a29a5"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p22,0p25,0p48.stdout",
+      "sha256": "046c4e92802b200738a0706b3ff51e99777d2e69f51a49a2d587e5334e81b156"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p25,0p2,0p5.stdout",
+      "sha256": "89ba0d1b77d8887b5ea2ce44f93d9f156dd1212c84ba01c90c4fac1a28d35ffd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p25,0p25,0p45.stdout",
+      "sha256": "926ca234c2c876d5b710c878f53d1bd9d6beeb88348ee39bb476be6d33398534"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p25,0p3,0p4.stdout",
+      "sha256": "e3363e9a7557c77539d1259b43f664da396676f4878488106010030676c54725"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p3,0p2,0p45.stdout",
+      "sha256": "5a0a58838783e2b88d7106f015224cf3a945a2e96ceb46a7a6933a374c7ecf06"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p05,0p3,0p25,0p4.stdout",
+      "sha256": "50826954d3d97c2a012defa062e8ddeb691373af9e24bfb89eb3853789195c75"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p07,0p18,0p25,0p5.stdout",
+      "sha256": "78307534ec36b880a08c8188d26c5c5f9d1a1082ab91772ca289a9c13a266fb6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p07,0p2,0p23,0p5.stdout",
+      "sha256": "46a068da34505c330ba7ad453ac1a2f40cfa96777735c883470e485f5e39ffd9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p07,0p2,0p25,0p48.stdout",
+      "sha256": "f65006f38ec360533d39988026bca833fd8ce123012cd3d60612de1ab5432ace"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p1,0p2,0p25,0p45.stdout",
+      "sha256": "d09761f3749665079e3a110c4d4687488ac64ee94edfe9f0fad121c61895ee08"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p1,0p25,0p2,0p45.stdout",
+      "sha256": "f9d9ad15d6c4ad8eb286482e9ee5c7271c0bf4ba4b0a4fb92ffa21a54dac8ff6"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p1,0p25,0p25,0p4.stdout",
+      "sha256": "839fcefb047c4f6806dbe4ac198a9642d56ef5cf3c1d3c8f94f208d01edb2e8b"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p3,0p25,0p25,0p2.stdout",
+      "sha256": "29ef7a849683dd8833b6a9bf70c60314e12319ee97014c1ae4b7dd81d56fd78e"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p3,0p25,0p3,0p15.stdout",
+      "sha256": "73b5fce05e51da5514c8dddd9a60c09b824ae3c6d84b3ec61d1179b877524a13"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p3,0p3,0p25,0p15.stdout",
+      "sha256": "b9ecddc4dce39405fafd890fe84fa44563e2a0c79998752c77450cf9ffc5456d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p35,0p2,0p25,0p2.stdout",
+      "sha256": "1bfa37a45ca45cb93cf94a4f63d787cd7456890a67d98333fa104704fbb34196"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p35,0p2,0p3,0p15.stdout",
+      "sha256": "935642c319041b511fb186bfb4a2dc9243ee89d34b1c757aa7505401b71b15f9"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p35,0p25,0p2,0p2.stdout",
+      "sha256": "079335da8ec35a7ffa977ab94a7b705d946b75852157c2e5021db3418cb07fb0"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p35,0p25,0p25,0p15.stdout",
+      "sha256": "78be813c4784c8c5a14e4284d46d4f742f3a410d39bcbe72a5f30e03753ac960"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p35,0p25,0p3,0p1.stdout",
+      "sha256": "8588428bf37c2a9f848324e4f605859b51edeb185cb08f3e99a0aab1f33b2561"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p35,0p3,0p2,0p15.stdout",
+      "sha256": "2b3a724e5f9acee88cd6da07c025e13efba9f88245b259a7bbd508fbef32d99d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p35,0p3,0p25,0p1.stdout",
+      "sha256": "c13a08778832cc385fb8868b0ce53e494bfe479d3606cc1a87dd4da9f1d0e75d"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p4,0p2,0p25,0p15.stdout",
+      "sha256": "a335f200b10ce957b4cc4ef9868973bbd77b12c13f48277321a22ab622d961ad"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p4,0p25,0p2,0p15.stdout",
+      "sha256": "7c3ac2453815c18e1acc7990fca15349eb2aff3b7092b699db78d747961c2167"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage7/seed0_k4_tau-min5p666666666666666_tau-max48p99999999999996_start1000_weights0p4,0p25,0p25,0p1.stdout",
+      "sha256": "b1e14b9ea4b50a1b2960ff4d505387a5895dc0a3d2d58f4cf9b03173b65ce438"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage8/seed0_k4_tau-min1p9270521156385474_tau-max48p99999999999997_start1000_weights0,0p4385,0,0p5615.stdout",
+      "sha256": "601e4e6ba4243bad72fdd654c364c30ce23b5c3c5dd3f72569c6975628392837"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/logs/kmaxwell/stage8/seed0_k4_tau-min1p9270521156385474_tau-max48p99999999999997_start1000_weights0p05,0p39465,0p05,0p50535.stdout",
+      "sha256": "b224ee6e4e8e2cb22d62b197599b7446cd9ae28fa6eb4aa554f29d7a66903d18"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/jacknzheng/kmaxwell-sota/98c92ea718ba15a7d11c1f6079c9cdca2e583c21/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/kmaxwell_kernel.py",
+      "sha256": "38c1d65d35bdf2ae97858aafca22c6b5bb7c8e8c4dc1e6d40d6480c851ef20a2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orange4664/modded-nanogpt/b60d7df7c846ab0aaec4c0dda9153445471f4875/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/A800_seed0.txt",
+      "sha256": "6b906bec0f201fe85e3b12b339e70f9d036f26c05474a6ad434e6fa0dfb000dd"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orange4664/modded-nanogpt/b60d7df7c846ab0aaec4c0dda9153445471f4875/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/A800_seed1.txt",
+      "sha256": "0abd418a8f1c12dcecf7319e666dd68ee6cca4744fa367fa442c69804d0dad12"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orange4664/modded-nanogpt/b60d7df7c846ab0aaec4c0dda9153445471f4875/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/A800_seed2.txt",
+      "sha256": "261927cb884fd7a49a922f11b0adf61dc94ccbbcb41d79a37586b34050e90d58"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orange4664/modded-nanogpt/b60d7df7c846ab0aaec4c0dda9153445471f4875/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/A800_seed3.txt",
+      "sha256": "27d99e9f4e44c0e34d09c7ebd8bd3003fd7eff2b472878c77b2cb8f30a5c110c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orange4664/modded-nanogpt/b60d7df7c846ab0aaec4c0dda9153445471f4875/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/A800_seed4.txt",
+      "sha256": "f764679591503472e93b490a6e224d4183eccac024e96fbc0081a87cbd0badff"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orange4664/modded-nanogpt/b60d7df7c846ab0aaec4c0dda9153445471f4875/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/A800_seed5.txt",
+      "sha256": "b348caba6bcb4ab6da8267e3454d2654a680997a736716a2f1dbbdc4df0ef932"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orange4664/modded-nanogpt/b60d7df7c846ab0aaec4c0dda9153445471f4875/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/A800_seed6.txt",
+      "sha256": "4c8f361451875dd679b0fa93d240d49c359d746d7bacec46ea6e7022b1854e15"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/orange4664/modded-nanogpt/b60d7df7c846ab0aaec4c0dda9153445471f4875/records/track_3_optimization/results/20260715_bimaxwell_baseline_3210/A800_seed7.txt",
+      "sha256": "85e666fdf8ef458e08de566184af07490dd0683f14c579f4ec8c8a2f8b0f7c6d"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import type { HTMLAttributes } from 'react'
 type MathMLProps = HTMLAttributes<Element> & {
   display?: 'block' | 'inline'
   displaystyle?: 'true' | 'false'
-  scriptLevel?: number
+  scriptlevel?: number
   separator?: 'true' | 'false'
   stretchy?: 'true' | 'false'
   accent?: 'true' | 'false'

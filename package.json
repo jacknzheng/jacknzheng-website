@@ -9,7 +9,10 @@
     "dev": "vite dev --port 3000",
     "generate-routes": "tsr generate",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "data:kmaxwell": "node --experimental-strip-types scripts/prepare-kmaxwell.ts",
+    "test:kmaxwell": "node --experimental-strip-types --test scripts/kmaxwell.test.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
