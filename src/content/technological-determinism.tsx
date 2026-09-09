@@ -305,14 +305,14 @@ export default function TechnologicalDeterminism() {
         >
           {"[16]"}
         </a>
-        {" and in Australia, the persistence of strong labor coordination. "}
+        {" and in Australia, strong labor coordination persisted. "}
       </p>
       <h2 id={"effective-ai-reform-can-change-our-trajectory"}>
         {"Effective AI reform can change our trajectory"}
       </h2>
       <p>
         {
-          "Just as with industrialization, social policies that mediated technological change in the 20th century will again mediate the imminent restructuring of society in the 21st century. While it would be naive to retrofit aforementioned social policies onto our current-day labor markets, we can use them to reason about the immediate future. "
+          "Just as with industrialization, social policies that mediated technological change in the 20th century will again mediate the imminent restructuring of society in the 21st century. While it would be naive to retrofit aforementioned social policies onto our current-day labor markets, we can use them to reason about policies for the immediate future. "
         }
       </p>
       <p>
@@ -366,7 +366,7 @@ export default function TechnologicalDeterminism() {
           "technological-paths-can-be-broadly-determined-but-still-rearranged"
         }
       >
-        {"Technological paths can be broadly determined, but still rearranged"}
+        {"The order of discovery can still be rearranged"}
       </h2>
       <p>
         {
