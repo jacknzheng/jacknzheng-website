@@ -611,17 +611,12 @@ export default function KMaxwellMomentum() {
         that memory may improve responsiveness, although it also reduces noise
         smoothing. Optimizer families such as RMSProp and ADAM, attempt to solve
         related problems by adjusting updates responsively, using running
-        squared-gradient estimates to scale updates; Adam also uses a running
-        average of the gradient in its numerator.{" "}
-        <a href="https://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf#page=29">
-          [16]
-        </a>
-        , <a href="https://arxiv.org/abs/1412.6980">[1]</a> This changes the
-        effective learning rate of each component, potentially slowing
-        convergence when gradient norm grows large - which is likely to occur
-        when training at the edge of stability. On the other hand, K-Maxwell
-        instead adjusts how much gradient history contributes to momentum, which
-        appears to strictly improve convergence in our experiments.
+        squared-gradient estimates to scale updates. This changes the effective
+        learning rate of each component, potentially slowing convergence when
+        gradient norm grows large - which is likely to occur when training at
+        the edge of stability. On the other hand, K-Maxwell instead adjusts how
+        much gradient history contributes to momentum, which appears to strictly
+        improve convergence in our experiments.
       </p>
 
       <h2 id="extending-to-larger-batch-sizes">
@@ -633,18 +628,18 @@ export default function KMaxwellMomentum() {
         that K-Maxwell’s advantage remains robust at larger batch sizes, while
         Bi-Maxwell’s performance approaches the control: Muon with momentum
         turned off (µ = 0). Ordinary single-EMA Muon (µ = 0.95) is included as a
-        separate comparison. Each method continues from the same per-seed
-        step-2,000 state to step 2,750; larger batches process more tokens, so
-        the figure compares methods within each batch size. We suspect this
-        reflects a shift in momentum’s role as larger batches make gradients
-        less noisy. Recent work on <em>batch sharpness</em>, which describes the
-        curvature encountered along each mini-batch’s gradient direction, finds
-        that momentum imposes a tighter stability constraint at small batch
-        sizes. At larger batch sizes, training approaches the optimizer’s
-        deterministic stability boundary, that is the limit associated with
-        full-batch gradients, allowing it to reach sharper regions than in the
-        small-batch regime, which allows us to continue to converge despite high
-        curvature. <a href="https://arxiv.org/html/2604.14108v1">[17]</a>
+        separate comparison. We suspect this reflects a shift in momentum’s role
+        as larger batches make gradients less noisy. Recent work on{" "}
+        <em>batch sharpness</em>, which describes the curvature encountered
+        along each mini-batch’s gradient direction, finds that momentum imposes
+        a tighter stability constraint at small batch sizes. At larger batch
+        sizes, training approaches the optimizer’s deterministic stability
+        boundary, that is the limit associated with full-batch gradients,
+        allowing it to reach sharper regions than in the small-batch regime,
+        which allows us to continue to converge despite high curvature.{" "}
+        <a href="https://arxiv.org/html/2604.14108v1">[17]</a>
+        We hypothesize that K-Maxwell retains its advantage at larger batch
+        sizes by extending this effect to even higher curvature regions.
       </p>
 
       <BatchFigure />
@@ -661,7 +656,7 @@ export default function KMaxwellMomentum() {
       <h2 id="limitations">Limitations</h2>
 
       <p>
-        K-Maxwell has a substantial GPU memory cost at larger model sizes as it
+        K-Maxwell has a substantial memory cost at larger model sizes as it
         stores seven additional EMA buffers per parameter that it is applied to.
         This can become prohibitively expensive at the trillion-parameter scale.
         We are actively working on momentum approaches that use less memory.
