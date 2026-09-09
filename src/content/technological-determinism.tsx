@@ -105,7 +105,7 @@ export default function TechnologicalDeterminism() {
         }
         <em>{"class dynamics. "}</em>
         {
-          "Technology serves as perhaps one of many mechanisms of material change. The case for technological determinism is decisively more pointed."
+          "Technology serves as perhaps one of many mechanisms of material change. The case for technological determinism is much more specific."
         }
       </p>
       <p>{"Underpinning technological determinism are 2 core beliefs:"}</p>
@@ -305,7 +305,7 @@ export default function TechnologicalDeterminism() {
         >
           {"[16]"}
         </a>
-        {" and in Australia, strong labor coordination persisted. "}
+        {" and in Australia, where strong labor coordination persisted. "}
       </p>
       <h2 id={"effective-ai-reform-can-change-our-trajectory"}>
         {"Effective AI reform can change our trajectory"}
