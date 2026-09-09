@@ -38,9 +38,8 @@ export default function KMaxwellMomentum() {
         We believe momentum remains an under-optimized area of pre-training.
         While much recent research focuses on optimizer design, momentum often
         still uses a single exponential moving average (EMA) buffer with a fixed
-        decay rate. An EMA keeps a running average of gradients, giving more
-        weight to recent ones. K-Maxwell combines several such memories and
-        gradually shifts their weights during training.{" "}
+        decay rate. K-Maxwell combines several such buffers and gradually shifts
+        their weights during training.{" "}
         <a href="https://arxiv.org/abs/1412.6980">[1]</a>,{" "}
         <a href="https://arxiv.org/html/2409.03137">[2]</a>
       </p>
@@ -55,14 +54,17 @@ export default function KMaxwellMomentum() {
 
       <h2 id="results">Results</h2>
       <p>
-        K-Maxwell reduces the required training steps by 90 on Muon (2.77%) and
-        60 on MuonH (1.92%) against the reported baselines. The same momentum
-        method transfers between them, with six buffers on MuonH and eight on
-        Muon. On SOAP-Muon, the observed reduction is only 10 steps (0.37%),
-        with no statistically significant improvement over Bi-Maxwell. We
-        suspect this is due to an overlap in how momentum and SOAP-style
-        preconditioning <a href="https://arxiv.org/abs/2409.11321">[6]</a> both
-        address oscillations at the edge of stability.
+        We simultaneously set NanoGPT records for 2 different optimizers (Muon
+        and MuonH but not SOAP) by tuning a single more-expressive momentnum
+        implementation. K-Maxwell reduces the required training steps by 90 on
+        Muon (2.77%) and 60 on MuonH (1.92%). The same momentum method is used
+        for both optimizers, with six buffers on MuonH and eight on Muon. On
+        SOAP-Muon, the observed reduction is only 10 steps (0.37%) on the
+        current world record, with no statistically significant improvement over
+        its predecessor, Bi-Maxwell. We suspect this is due to an overlap in how
+        momentum and SOAP-style preconditioning{" "}
+        <a href="https://arxiv.org/abs/2409.11321">[6]</a> both address
+        oscillations at the edge of stability.
       </p>
 
       <TrainingFigure
