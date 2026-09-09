@@ -586,16 +586,6 @@ export default function KMaxwellMomentum() {
 
       <h2 id="annealing-momentum">Annealing momentum</h2>
 
-      <p id="figure-2">
-        <a href="#momentum-explorer">
-          Explore the annealing schedule and individual buffers in the
-          interactive figure above.
-        </a>{" "}
-        The decay rates stay fixed while the mixture shifts toward more recent
-        gradients. Use Start, Middle, and End to compare the scheduled memory
-        profiles.
-      </p>
-
       <p>
         We also observe substantial gains from annealing momentum, and see a
         step-function improvement over configurations that kept the mixture
