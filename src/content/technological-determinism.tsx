@@ -444,25 +444,9 @@ export default function TechnologicalDeterminism() {
         }
       </p>
       <h2 id={"conclusion"}>{"Conclusion"}</h2>
-      <blockquote className="my-6 border-l-2 border-rule pl-5">
-        <p>
-          {
-            "“In any moment of decision, the best thing you can do is the right thing, the next best thing is the wrong thing, and the worst thing you can do is nothing.”"
-          }
-          <em>
-            <br />
-            {"Thomas Carlyle"}
-          </em>
-        </p>
-      </blockquote>
       <p>
         {
-          "We live in a time of momentous change. Because of this, as individuals, groups and organizations we possess a disproportionate ability to affect the future."
-        }
-      </p>
-      <p>
-        {
-          "Whether we believe it is already determined or malleable can feel like a trivial argument to be had, that is just of historical or intellectual interest. But I would argue this is one of the most important perspectives of our time."
+          "Whether we believe the future is already determined or malleable can feel like a trivial argument to be had, that is just of historical or intellectual interest. But I would argue this is one of the most important perspectives of our time."
         }
       </p>
       <p>
