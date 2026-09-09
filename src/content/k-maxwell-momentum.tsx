@@ -55,7 +55,7 @@ export default function KMaxwellMomentum() {
       <h2 id="results">Results</h2>
       <p>
         We simultaneously set NanoGPT records for 2 different optimizers (Muon
-        and MuonH but not SOAP) by tuning a single more-expressive momentnum
+        and MuonH but not SOAP) by tuning a single more-expressive momentum
         implementation. K-Maxwell reduces the required training steps by 90 on
         Muon (2.77%) and 60 on MuonH (1.92%). The same momentum method is used
         for both optimizers, with six buffers on MuonH and eight on Muon. On
