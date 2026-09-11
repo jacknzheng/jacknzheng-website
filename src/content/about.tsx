@@ -17,8 +17,9 @@ export default function About() {
       <p>
         After sophomore, I left university to join Superpower. I helped scale
         paid media from zero to our largest acquisition channel, through to
-        Series B. Our team was mostly 2 full-timers. I also worked on our web
-        design, sold peptides and prescriptions, and did medical evals.
+        Series B. Our team was mostly 2 full-timers. I also worked on web and
+        product design, sold peptides and prescriptions, and did AI medical
+        evals.
       </p>
 
       <p>
