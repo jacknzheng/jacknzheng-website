@@ -310,29 +310,6 @@ export default function TechnologicalDeterminism() {
       <h2 id={"effective-ai-reform-can-change-our-trajectory"}>
         {"Effective AI reform can change our trajectory"}
       </h2>
-      <p>
-        {
-          "Just as with industrialization, social policies that mediated technological change in the 20th century will again mediate the imminent restructuring of society in the 21st century. While it would be naive to retrofit aforementioned social policies onto our current-day labor markets, we can use them to reason about policies for the immediate future. "
-        }
-      </p>
-      <p>
-        {
-          "AI will likely first automate menial back-office jobs, potentially expanding employment and productivity in the short-term but depressing wages as skilled labor performance reaches parity with lower-skilled labor "
-        }
-        <a
-          href={"https://www.fabricatedknowledge.com/p/mythos-and-engels-pause"}
-        >
-          {"[17]"}
-        </a>{" "}
-        <a href={"https://www.nber.org/papers/w25684"}>{"[18]"}</a>
-        {
-          ". It is clear that similar effects were shared by industrializing, and manufacturing economies. "
-        }
-        <a href={"https://gabriel-zucman.eu/files/teaching/Allen09.pdf"}>
-          {"[3]"}
-        </a>
-        {" We can observe that:"}
-      </p>
       <ul className="my-5 list-disc space-y-3 pl-6">
         <li>
           <strong>
@@ -348,19 +325,14 @@ export default function TechnologicalDeterminism() {
         <li>
           <strong>
             {
-              "The distribution of manufactured goods, just as the distribution of intelligence will determine shared prosperity."
+              "Shared prosperity depends on deliberately distributing access to technology and its gains."
             }
           </strong>
           {
-            " Technological progress naturally concentrates economic gains in free market systems. Distribution infrastructure needs to be built such as public compute allocation and cheap, safe, open intelligence."
+            " Without deliberate policies to spread access and benefits, technological progress can concentrate capital and economic gains while leaving everyday people no better off, or even worse off. The Soviet experience illustrates how technological achievement can coexist with deteriorating living conditions when resources fail to reach the people who need them. Technology alone does not ensure social progress: policy determines how resources are distributed and who can use them. Just as manufactured goods needed to become widely affordable and available, intelligence must become abundant and accessible through measures such as public compute allocation and cheap, safe, open intelligence."
           }
         </li>
       </ul>
-      <p>
-        {
-          "Without going too deeply into project and policy proposals, as I plan to in a later post, the future of work and the organization of society is evidently still being set into motion. If anything, efforts now will have lasting effects on the century to come, just as the political and economic reforms of the industrial era did. "
-        }
-      </p>
       <h2
         id={
           "technological-paths-can-be-broadly-determined-but-still-rearranged"
@@ -399,15 +371,15 @@ export default function TechnologicalDeterminism() {
         }
         <a href={"https://www.sandia.gov/about/history/1960s/"}>{"[19]"}</a>
         {
-          " Separate safeguards, including environmental sensing devices that check conditions match a predetermined launch sequence, and accident-safety switches, were also designed to prevent unintentional detonation. In 1961, a B-52 bomber carrying two Mark 39 hydrogen bombs broke apart over Goldsboro, North Carolina. One bomb progressed through several stages of its arming sequence, but one switch remaining in the safe position preventing catastrophe. The Palomares incident in 1966 and the Titan II incident in 1980 are further examples of the effectiveness of command and control (C2) technologies. While PALs and C2 technologies, a preventative technology developed to control the capabilities of nuclear weapons, are certainly outliers in history - they are not alone. Emergency core cooling mechanisms were developed alongside nuclear reactors as were biological safety cabinets for laboratory research, to control the risks associated with new technologies."
+          " Separate safeguards, including environmental sensing devices that check conditions match a predetermined launch sequence, and accident-safety switches, were also designed to prevent unintentional detonation. In 1961, a B-52 bomber carrying two Mark 39 hydrogen bombs broke apart over Goldsboro, North Carolina. One bomb progressed through several stages of its arming sequence, but one switch remaining in the safe position preventing catastrophe. The Palomares incident in 1966 and the Titan II incident in 1980 are further examples of the effectiveness of command and control (C2) technologies. Preventative efforts to contain capabilities are certainly rare in history, but PALs and C2 technologies are not alone. Emergency core cooling mechanisms were developed alongside nuclear reactors as were biological safety cabinets for laboratory research."
         }
       </p>
-      <h2 id={"ai-safety-must-pursue-command-and-control"}>
-        {"AI safety must pursue command and control"}
+      <h2 id={"ai-safety-should-pursue-command-and-control"}>
+        {"AI safety should pursue command and control"}
       </h2>
       <p>
         {
-          "Today we face a similar threat with AI’s cyber and bio capabilities. It has become clear that models possess the ability to manipulate human judgments "
+          "Today we face a similar threat to nuclear weapons, as AI can now equip individuals and groups with unprecedented cyber and bio capabilities. It has become clear that models possess the ability to manipulate human judgments "
         }
         <a href={"https://www.nature.com/articles/s41562-025-02194-6"}>
           {"[20]"}
@@ -439,8 +411,10 @@ export default function TechnologicalDeterminism() {
         >
           {"[26]"}
         </a>
+      </p>
+      <p>
         {
-          " As with nuclear weapons, deceleration attempts - such as nuclear non-proliferation, have scarcely prevented actors from building new capabilities. Pursuing strong command and control mechanisms, however, as with PALs, seem to be one of the few ways to mitigate the negative externalities of potentially catastrophic technologies. PALs have ensured that nuclear weapons cannot be detonated by rogue actors and its capabilities cannot be accidentally activated or used discreetly. Our PAL designs were subsequentialy shared with the Soviet Union and France, and have become a nuclear standard. This effort was intentionally led by the government and mandated by the president, and was not a logical continuation of prior technological developments. Our future, and that of model alignment, will similarly be steered by the willpower of people - researchers and policymakers - just as it was with C2 technologies and PALs for nuclear weapons. "
+          "As with nuclear weapons, deceleration attempts - such as nuclear non-proliferation, have scarcely prevented actors from accessing or developing dangerous capabilities. Pursuing strong command and control mechanisms however, as with PALs, seem to be one of the few ways to mitigate the negative externalities of potentially catastrophic technologies. PALs have ensured that nuclear weapons cannot be detonated by rogue actors and its capabilities cannot be accidentally activated or used discreetly. Our PAL designs were subsequentialy shared with the Soviet Union and France, and have become a nuclear standard today. This effort was intentionally led by the government and mandated by the president, and certainly was not a logical continuation of prior technological developments. Our future, and that of model alignment, will similarly be steered by the willpower of people - researchers and policymakers - just as it was with C2 technologies and PALs for nuclear weapons. "
         }
       </p>
       <h2 id={"conclusion"}>{"Conclusion"}</h2>
