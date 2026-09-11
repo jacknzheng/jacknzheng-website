@@ -399,11 +399,11 @@ export default function TechnologicalDeterminism() {
         }
         <a href={"https://www.sandia.gov/about/history/1960s/"}>{"[19]"}</a>
         {
-          " Separate safeguards, including environmental sensing devices that check conditions match a predetermined launch sequence, and accident-safety switches, were also designed to prevent unintentional detonation. In 1961, a B-52 bomber carrying two Mark 39 hydrogen bombs broke apart over Goldsboro, North Carolina. One bomb progressed through several stages of its arming sequence, but one switch remaining in the safe position preventing catastrophe. While PALs, a preventative technology developed to control the capabilities of nuclear weapons, are certainly an outlier in some respect - they are not alone. Emergency core cooling mechanisms were developed alongside nuclear reactors as were biological safety cabinets for laboratory research, to control the existential risks associated with new technologies."
+          " Separate safeguards, including environmental sensing devices that check conditions match a predetermined launch sequence, and accident-safety switches, were also designed to prevent unintentional detonation. In 1961, a B-52 bomber carrying two Mark 39 hydrogen bombs broke apart over Goldsboro, North Carolina. One bomb progressed through several stages of its arming sequence, but one switch remaining in the safe position preventing catastrophe. The Palomares incident in 1966 and the Titan II incident in 1980 are further examples of the effectiveness of command and control (C2) technologies. While PALs and C2 technologies, a preventative technology developed to control the capabilities of nuclear weapons, are certainly outliers in history - they are not alone. Emergency core cooling mechanisms were developed alongside nuclear reactors as were biological safety cabinets for laboratory research, to control the risks associated with new technologies."
         }
       </p>
-      <h2 id={"ai-safety-needs-policy-intervention"}>
-        {"AI safety needs policy intervention"}
+      <h2 id={"ai-safety-must-pursue-command-and-control"}>
+        {"AI safety must pursue command and control"}
       </h2>
       <p>
         {
@@ -440,7 +440,7 @@ export default function TechnologicalDeterminism() {
           {"[26]"}
         </a>
         {
-          " As with nuclear weapons, deceleration attempts - such as nuclear non-proliferation, have scarcely prevented actors from building new capabilities. Pursuing strong command and control mechanisms, however, as with PALs, seem to be one of the few ways to mitigate the negative externalities of potentially catastrophic technologies. PALs have ensured that nuclear weapons cannot be detonated by rogue actors and its capabilities cannot be accidentally activated or used discreetly. Our PAL designs were subsequentialy shared with the Soviet Union and France, and have become a nuclear standard. This effort was intentionally led by the government and mandated by the president, not the predetermined product of prior technological developments. Our future, and that of alignment, will be steered by the willpower of people, researchers and policymakers, not the amorphous force of technology. "
+          " As with nuclear weapons, deceleration attempts - such as nuclear non-proliferation, have scarcely prevented actors from building new capabilities. Pursuing strong command and control mechanisms, however, as with PALs, seem to be one of the few ways to mitigate the negative externalities of potentially catastrophic technologies. PALs have ensured that nuclear weapons cannot be detonated by rogue actors and its capabilities cannot be accidentally activated or used discreetly. Our PAL designs were subsequentialy shared with the Soviet Union and France, and have become a nuclear standard. This effort was intentionally led by the government and mandated by the president, and was not a logical continuation of prior technological developments. Our future, and that of model alignment, will similarly be steered by the willpower of people - researchers and policymakers - just as it was with C2 technologies and PALs for nuclear weapons. "
         }
       </p>
       <h2 id={"conclusion"}>{"Conclusion"}</h2>
