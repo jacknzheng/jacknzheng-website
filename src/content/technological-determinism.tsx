@@ -325,11 +325,11 @@ export default function TechnologicalDeterminism() {
         <li>
           <strong>
             {
-              "Shared prosperity depends on deliberately distributing access to technology and its gains."
+              "Technology does not motivate societal progress, only societal change."
             }
           </strong>
           {
-            " Without deliberate policies to spread access and benefits, technological progress can concentrate capital and economic gains while leaving everyday people no better off, or even worse off. The Soviet experience illustrates how technological achievement can coexist with deteriorating living conditions when resources fail to reach the people who need them. Technology alone does not ensure social progress: policy determines how resources are distributed and who can use them. Just as manufactured goods needed to become widely affordable and available, intelligence must become abundant and accessible through measures such as public compute allocation and cheap, safe, open intelligence."
+            " The properties of technological distribution are what determine societal progress - it is entirely possible for technology to develop in its own silo as in the USSR. Distribution whether through taxation and transfer payments, strong trade networks or central planning, mediate the effect of technology on society - as was the case with manufactured goods. As these are within the agency of voters and policymakers, it is reasonable to believe that we can still change our trajectory. "
           }
         </li>
       </ul>
