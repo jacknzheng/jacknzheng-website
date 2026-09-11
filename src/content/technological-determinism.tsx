@@ -310,6 +310,11 @@ export default function TechnologicalDeterminism() {
       <h2 id={"effective-ai-reform-can-change-our-trajectory"}>
         {"Effective AI reform can change our trajectory"}
       </h2>
+      <p>
+        {
+          "While it would be naive to retrofit aforementioned policies onto our current-day labor markets, we can use them to reason about policies for the immediate future."
+        }
+      </p>
       <ul className="my-5 list-disc space-y-3 pl-6">
         <li>
           <strong>
