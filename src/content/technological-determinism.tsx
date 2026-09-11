@@ -236,7 +236,7 @@ export default function TechnologicalDeterminism() {
           {"[8]"}
         </a>
         {
-          " Central planning only exacerbated allocation difficulties. Ironically, the Soviet Union often had grown more food than it needed, but it possessed little capacity to distribute it - creating what came to be known as a ‘nation of queuers’."
+          " Central planning only exacerbated allocation difficulties. Ironically, the Soviet Union often had grown more food than it needed, but it possessed little capacity to distribute it - creating what came to be known as a ‘permanent shortage economy’."
         }
       </p>
       <figure id="figure-2">
@@ -266,12 +266,12 @@ export default function TechnologicalDeterminism() {
         {" Canals and railroads connected producers with distant markets, "}
         <a href={"https://www.nber.org/papers/w5303"}>{"[10]"}</a>
         {
-          " as mechanization lowered costs for everyday goods. While urban life did initially suffer from disease, abject poverty and inequality, it was not characterized by the permanent shortages and persistent famine that defined most of Soviet life. "
+          " as mechanization lowered costs for everyday goods. While urban life did initially suffer from disease, abject poverty and extreme inequality, it was not characterized by the permanent shortages and persistent famine that defined most of Soviet life. It is clear that even simple, domestic trade policies can have an enduring effect on the trajectory of a society. "
         }
       </p>
       <p>
         {
-          "However, even the widening inequality seen as an inevitable byproduct of industrial capitalism is not unavoidable. We can consider post-war industrial Sweden and America. Both nations’ wage distributions sharply diverged in the 1970s, predominately due to Swedish wage-setting arrangements and active labor market policies. Strong unions collectively bargained for a policy of wage solidarity, narrowing wage differences across firms and industries. "
+          "However, even the inequality seen as an inevitable byproduct of industrial capitalism is not unavoidable. We can consider post-war industrial Sweden and America. Both nations’ wage distributions sharply diverged in the 1970s, predominately due to Swedish wage-setting arrangements and active labor market policies. Strong unions collectively bargained for a policy of wage solidarity, narrowing wage differences across firms and industries. "
         }
         <a href={"https://www.nber.org/system/files/chapters/c6522/c6522.pdf"}>
           {"[11]"}
@@ -285,11 +285,11 @@ export default function TechnologicalDeterminism() {
         </a>{" "}
         <a href={"https://www.nber.org/papers/w3817"}>{"[13]"}</a>
         {
-          " Reaganism then accelerated wage deflation and disparities in the US via corporate deregulation and the dismantling of labor unions "
+          " While comparable reforms were made during the Progressive Era and with success, Reaganism reversed many landmark anti-trust and progressive taxation policies, causing spiralling wage deflation and income disparities in the US. Many of these changes - corporate deregulation and the dismantling of labor unions - paved the way for the corporate consolidation present in America today. "
         }
         <a href={"https://www.nber.org/papers/w5093"}>{"[14]"}</a>
         {
-          ", paving the way for the corporate consolidation present in America today. Again, this is not true of countries such as Singapore and Australia which enforced strict pro-competition mandates, "
+          " The same cannot be observed for other industrial, capitalist nations such as Singapore and Australia which enforced strict pro-competition mandates, "
         }
         <a
           href={
@@ -307,25 +307,22 @@ export default function TechnologicalDeterminism() {
         </a>
         {" and in Australia, where strong labor coordination persisted. "}
       </p>
-      <h2 id={"effective-ai-reform-can-change-our-trajectory"}>
-        {"Effective AI reform can change our trajectory"}
+      <h2 id={"ai-reform-can-change-our-trajectory"}>
+        {"AI reform can change our trajectory"}
       </h2>
       <p>
         {
-          "While it would be naive to retrofit aforementioned policies onto our current-day labor markets, we can use them to reason about policies for the immediate future."
+          " If technological determinism were true, you would not observe such disparities between nations, that differ not in technological development, but economic policy. While every country has its nuances of geography, culture and history - and so differences are expected - it seems hard to believe that such wide differences in inequality, the availability of goods and material conditions can just be chalked up to the 'rippling effect' of technology. "
         }
       </p>
       <ul className="my-5 list-disc space-y-3 pl-6">
         <li>
           <strong>
-            {
-              "Wage-setting institutions and large-scale unionization provided strong counterbalances against economic polarization. "
-            }
+            {"Economic policy and lobbying may be more important than ever. "}
           </strong>
           {
-            "While transfer payments and active labor market policy were important at supporting the lowest income earners, the decentralization of collective bargaining in 1980s Sweden showed wage-setting instead was a major contributor to keeping wage differences compressed. "
+            " If the contention is that technology will force our hand in policy, this seems to be anything but true. We see how active labor policy and market regulation has led to societies that do not resemble each other. "
           }
-          <a href={"https://www.nber.org/papers/w7502"}>{"[12]"}</a>
         </li>
         <li>
           <strong>
@@ -334,7 +331,7 @@ export default function TechnologicalDeterminism() {
             }
           </strong>
           {
-            " The properties of technological distribution are what determine societal progress - it is entirely possible for technology to develop in its own silo as in the USSR. Distribution whether through taxation and transfer payments, strong trade networks or central planning, mediate the effect of technology on society - as was the case with manufactured goods. As these are within the agency of voters and policymakers, it is reasonable to believe that we can still change our trajectory. "
+            " Whether it is progressive taxation, central planning, or trade networks that expand access to manufactured goods - the distribution of intelligence, will influence how the gains of progress are shared. "
           }
         </li>
       </ul>
