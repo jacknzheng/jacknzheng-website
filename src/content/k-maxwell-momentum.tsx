@@ -27,7 +27,7 @@ export default function KMaxwellMomentum() {
     <>
       <p className="article-byline">
         Collaborator:{" "}
-        <a href="https://github.com/jeffreycider">Jeffrey Cheng</a>
+        <a href="https://x.com/jeffreycider">Jeffrey Cheng</a>
         {" · "}
         <a href="https://github.com/jacknzheng/kmaxwell-sota/blob/master/records/track_3_optimization/results/20260826_kmaxwell_3160/README.md">
           GitHub report
