@@ -139,6 +139,15 @@ body {
   font-size: 1.15rem;
 }
 .article-body math { font-family: math; }
+.article-body .article-equation-lines { display: grid; gap: 0.65rem; font-family: math; line-height: 1.7; }
+.article-equation-lines > div { white-space: nowrap; }
+.article-equation-label { display: block; font-family: var(--font-sans); font-size: 0.78rem; color: #69665f; }
+.article-body .article-equation-heading { margin: 1.75rem 0 0.75rem; font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; }
+.article-body .article-equation-caption { color: #69665f; font-size: 0.82rem; }
+.km-ball-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.65rem; margin: 0 0 1rem; }
+.km-ball-controls label { margin-left: auto; font-size: 0.75rem; color: #69665f; }
+.km-ball-controls output { display: inline-block; min-width: 1.5rem; color: #245eb5; font-variant-numeric: tabular-nums; text-align: right; }
+.km-ball-controls input { flex-basis: 100%; width: 100%; accent-color: #245eb5; cursor: pointer; }
 .article-body .article-reference {
   padding-left: 2rem;
   text-indent: -2rem;
