@@ -9,7 +9,7 @@ export const Route = createFileRoute('/about')({
       {
         name: 'description',
         content:
-          'Jack Neo Zheng is doing pre-training and alignment research at South Park Commons.',
+          'Jack Neo Zheng is doing pre-training research at South Park Commons.',
       },
     ],
   }),

@@ -3,8 +3,7 @@ export default function About() {
   return (
     <>
       <p>
-        I’m currently doing pre-training and alignment research at South Park
-        Commons.
+        I’m currently doing pre-training research at South Park Commons.
       </p>
 
       <p>
@@ -16,19 +15,20 @@ export default function About() {
       </p>
 
       <p>
-        After sophomore, I left university to join Superpower. I helped scale
-        paid media from zero to our largest acquisition channel, through to
-        Series B - with a team of 2 full-timers. I also worked on product design
-        and our AI doctor.
+        After sophomore, I left university to join Superpower as employee #20.
+        I helped scale paid media from zero to our largest acquisition channel,
+        through to our Series B. I also worked on our AI doctor harness, and
+        medical evals.
       </p>
 
       <p>
-        Now, I am doing pre-training research at South Park Commons. I also run
-        a debate club on Friday nights where we discuss AI safety, geopolitics
-        and economic policy.
+        I also run a competitive debate club on Tuesday nights.
       </p>
 
-      <p>You can reach me at jackzengh2004[at]gmail.com</p>
+      <p>
+        You can reach me at{' '}
+        <a href="mailto:jacknzheng@gmail.com">jacknzheng@gmail.com</a>
+      </p>
     </>
   );
 }

@@ -12,9 +12,18 @@ export type Writing = {
   category: Category;
   image: string;
   excerpt: string;
+  externalUrl?: string;
 };
 
 export const writings: Writing[] = [
+  {
+    slug: "bubbleforce",
+    title: "Bubbleforce",
+    category: "Technical Essays",
+    image: "/images/bubbleforce/cover.webp",
+    excerpt: "Bubbleforce",
+    externalUrl: "https://jeffreycider.github.io/posts/bubbleforce/",
+  },
   {
     slug: "is-the-future-of-ai-already-written",
     title: "Is the future of AI already written?",

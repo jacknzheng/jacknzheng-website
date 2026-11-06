@@ -12,6 +12,7 @@ const socialItems = [
   { href: 'https://www.linkedin.com/in/jacknzheng', label: 'LinkedIn' },
   { href: 'https://x.com/jacknzheng', label: 'X' },
   { href: 'https://github.com/jacknzheng', label: 'GitHub' },
+  { href: 'https://curius.app/jack-zheng', label: 'Curius' },
 ] as const
 
 export function SiteSidebar() {
