@@ -78,11 +78,6 @@ body {
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
-[data-writing="k-maxwell-momentum"] > h1 {
-  font-size: clamp(2.5rem, 6vw, 3.5rem);
-  font-style: normal;
-  line-height: 1.1;
-}
 .km-byline {
   display: flex;
   flex-wrap: wrap;

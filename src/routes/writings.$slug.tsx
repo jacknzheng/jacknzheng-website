@@ -31,7 +31,7 @@ function WritingPage() {
   const Body = writingComponents[writing.slug]
 
   return (
-    <article className="max-w-[40rem]" data-writing={writing.slug}>
+    <article className="max-w-[40rem]">
       <p className="font-sans text-[0.85rem] text-muted">
         <Link
           to={categoryPath[writing.category]}
