@@ -1,4 +1,4 @@
-import { useId, useState } from 'react'
+import { useId } from 'react'
 import data from '../../data/kmaxwell/experiments.json'
 import { kernel, meanAge, weightsAt } from './math'
 import {
@@ -25,18 +25,11 @@ export default function MomentumFigure({
   onOptimizerChange,
   onStepChange,
 }: MomentumSelection & { onStepChange: (step: number) => void }) {
-  const [buffer, setBuffer] = useState<number | null>(null)
   const recipe = data.recipes[optimizer]
-  const training = data.training[optimizer]
-  const h = optimizer === 'muonh'
   const weights = weightsAt(recipe, step)
   const active = step >= recipe.onset
   const age = active ? meanAge(recipe.betas, weights) : 19
   const id = useId()
-  const switchOptimizer = (next: Optimizer) => {
-    onOptimizerChange(next)
-    setBuffer(null)
-  }
   const kx = scale([0, 300], [48, 344])
   const ky = (v: number) =>
     scale([-5, -1], [227, 30])(Math.log10(Math.max(1e-5, v)))
@@ -67,7 +60,7 @@ export default function MomentumFigure({
     <figure
       className="km-figure km-opening km-memory"
       id="momentum-explorer"
-      aria-label="Momentum and buffer explorer"
+      aria-label="Momentum explorer"
     >
       <section aria-labelledby={`${id}-memory`}>
         <h3 id={`${id}-memory`}>How much does momentum remember?</h3>
@@ -77,7 +70,7 @@ export default function MomentumFigure({
         <div className="km-chart-layout km-chart-with-controls">
           <Chart
             title="Momentum weight by gradient age"
-            description="Logarithmic weight axis. K-Maxwell is blue, Bi-Maxwell black, single EMA dashed gray. Select a buffer below to inspect its contribution."
+            description="Logarithmic weight axis. K-Maxwell is blue, Bi-Maxwell black, single EMA dashed gray."
           >
             <Axes
               x={kx}
@@ -110,31 +103,6 @@ export default function MomentumFigure({
                 strokeDasharray={k.dash}
               />
             ))}
-            {active && buffer !== null && (
-              <path
-                d={linePath(
-                  lags
-                    .filter(
-                      (lag) =>
-                        kernel(
-                          [recipe.betas[buffer]],
-                          [weights[buffer]],
-                          lag,
-                        ) >= 1e-5,
-                    )
-                    .map((lag) => ({
-                      x: kx(lag),
-                      y: ky(
-                        kernel([recipe.betas[buffer]], [weights[buffer]], lag),
-                      ),
-                    })),
-                )}
-                fill="none"
-                stroke={colors.kmaxwell}
-                strokeWidth="2"
-                strokeDasharray="2 3"
-              />
-            )}
           </Chart>
           <div className="km-chart-sidebar">
             <div className="km-toolbar">
@@ -145,7 +113,7 @@ export default function MomentumFigure({
                   { value: 'muon', label: 'Muon' },
                   { value: 'muonh', label: 'MuonH' },
                 ]}
-                onChange={switchOptimizer}
+                onChange={onOptimizerChange}
               />
             </div>
             <Legend />
@@ -186,46 +154,6 @@ export default function MomentumFigure({
           ))}
         </div>
       </div>
-      <div className="km-buffer-heading">
-        Buffer weights · select to highlight
-      </div>
-      <div
-        className="km-buffers"
-        data-count={recipe.betas.length}
-        role="group"
-        aria-label="Inspect individual momentum buffers"
-      >
-        {recipe.betas.map((beta, i) => (
-          <button
-            key={beta}
-            type="button"
-            aria-pressed={buffer === i}
-            disabled={!active}
-            onClick={() => setBuffer(buffer === i ? null : i)}
-            aria-label={`Buffer ${i + 1}, mean age ${(beta / (1 - beta)).toFixed(1)} steps, ${(weights[i] * 100).toFixed(1)} percent weight`}
-          >
-            <span className="km-buffer-bar">
-              <i style={{ height: `${weights[i] * 100}%` }} />
-            </span>
-            <strong>{(beta / (1 - beta)).toFixed(1)}</strong>
-            <span>steps</span>
-            <small>
-              {active ? `${(weights[i] * 100).toFixed(1)}%` : 'inactive'}
-            </small>
-          </button>
-        ))}
-      </div>
-      <details className="km-details">
-        <summary>How it works</summary>
-        <p>
-          The buffers keep fixed memory timescales; the slider changes their
-          mixture weights. Curves show the scheduled profile, excluding the
-          initialization transient and common Nesterov contribution.
-          {h &&
-            ' Bi-Maxwell is a reference profile, not a MuonH experiment.'}{' '}
-          <a href={training.source}>Experiment report ↗</a>
-        </p>
-      </details>
     </figure>
   )
 }
