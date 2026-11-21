@@ -27,7 +27,7 @@ export default function KMaxwellMomentum() {
     <>
       <div className="km-byline">
         <div>
-          <p className="font-serif text-xl">Authors: Jack Neo Zheng* · Jeffrey Siedar Cheng*</p>
+          <p className="font-serif text-xl">Jack Neo Zheng* · Jeffrey Siedar Cheng*</p>
           <p className="mt-1 text-sm">*Authors listed in no particular order.</p>
           <p className="mt-1 text-sm">
             <a href="https://x.com/jacknzheng">@jacknzheng</a>,{" "}
