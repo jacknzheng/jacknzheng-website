@@ -81,59 +81,6 @@ export default function KMaxwellMomentum() {
         onOptimizerChange={changeOptimizer}
       />
 
-      <div
-        className="article-table"
-        tabIndex={0}
-        role="region"
-        aria-label="K-Maxwell experiment results"
-      >
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Configuration and source</th>
-              <th scope="col">Baseline → K-Maxwell steps</th>
-              <th scope="col">Reduction</th>
-              <th scope="col">Runs and reported mean loss</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                Tuned Muon + auxiliary AdamW; submission #357{" "}
-                <a href="https://github.com/KellerJordan/modded-nanogpt/pull/357">
-                  [3]
-                </a>
-              </td>
-              <td>3250 → 3160</td>
-              <td>90 steps; 2.77%</td>
-              <td>8 seeds; 3.27794</td>
-            </tr>
-            <tr>
-              <td>
-                MuonH fast-slow decay; submission #359{" "}
-                <a href="https://github.com/KellerJordan/modded-nanogpt/pull/359">
-                  [4]
-                </a>
-              </td>
-              <td>3125 → 3065</td>
-              <td>60 steps; 1.92%</td>
-              <td>8 seeds; 3.27833</td>
-            </tr>
-            <tr>
-              <td>
-                SOAP-Muon + Tail-EMA + RowFloor + CWD; companion report{" "}
-                <a href="https://github.com/jacknzheng/kmaxwell-sota/tree/track3-kmaxwell-sota/records/track_3_optimization/results/20260824_kmaxwell_2680">
-                  [5]
-                </a>
-              </td>
-              <td>2690 → 2680</td>
-              <td>10 steps; 0.37%</td>
-              <td>8 seeds; 3.27847 using Tail-EMA evaluation</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
       <h2 id="experiment-design">Experiment design</h2>
       <p>With K-Maxwell, we test the hypothesis that more expressive momentum can accelerate convergence on modded-nanoGPT Track 3 optimization. This track measures how many optimizer steps are needed to reach below 3.28 validation loss.</p>
       <p>The setup is simple, we use approximately 2 billion FineWeb tokens, with 524,288 tokens per step and we train GPT-2 small, which is 124M parameters with 12 transformer blocks, using the Muon and MuonH optimizers.</p>
@@ -865,6 +812,60 @@ export default function KMaxwellMomentum() {
         Understanding Optimization in Deep Learning with Central Flows
         [Companion website].
       </p>
+      <h2 id="appendix">Appendix: Experiment results</h2>
+      <div
+        className="article-table"
+        tabIndex={0}
+        role="region"
+        aria-label="K-Maxwell experiment results"
+      >
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Configuration and source</th>
+              <th scope="col">Baseline → K-Maxwell steps</th>
+              <th scope="col">Reduction</th>
+              <th scope="col">Runs and reported mean loss</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Tuned Muon + auxiliary AdamW; submission #357{" "}
+                <a href="https://github.com/KellerJordan/modded-nanogpt/pull/357">
+                  [3]
+                </a>
+              </td>
+              <td>3250 → 3160</td>
+              <td>90 steps; 2.77%</td>
+              <td>8 seeds; 3.27794</td>
+            </tr>
+            <tr>
+              <td>
+                MuonH fast-slow decay; submission #359{" "}
+                <a href="https://github.com/KellerJordan/modded-nanogpt/pull/359">
+                  [4]
+                </a>
+              </td>
+              <td>3125 → 3065</td>
+              <td>60 steps; 1.92%</td>
+              <td>8 seeds; 3.27833</td>
+            </tr>
+            <tr>
+              <td>
+                SOAP-Muon + Tail-EMA + RowFloor + CWD; companion report{" "}
+                <a href="https://github.com/jacknzheng/kmaxwell-sota/tree/track3-kmaxwell-sota/records/track_3_optimization/results/20260824_kmaxwell_2680">
+                  [5]
+                </a>
+              </td>
+              <td>2690 → 2680</td>
+              <td>10 steps; 0.37%</td>
+              <td>8 seeds; 3.27847 using Tail-EMA evaluation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </>
   );
 }
